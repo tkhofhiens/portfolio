@@ -13,9 +13,10 @@ function change() {
 }
 backcolor.addEventListener('click', change);
 
-function quiz() {
+
 const btn = document.getElementById('game');
     // Set the questions
+function play() {
     const quiz = new Map([
         ["What is Superman's real name?", "Clark Kent"],
         ["What is Wonderwoman's real name?", "Dianna Prince"],
@@ -42,4 +43,4 @@ const btn = document.getElementById('game');
     // At the end of the game, report the player's score
     alert(`Game Over, you scored ${score} point${score > 1 ? 's' : ''}`);
 }
-btn.addEventListener('click', quiz);
+btn.addEventListener('click', play);
