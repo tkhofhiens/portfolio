@@ -20,31 +20,32 @@
     <main>
         <h4>This is an example of mapping data and using js alerts.</h4>
         // Set the questions
-const quiz = new Map([
-    ["What is Superman's real name?","Clark Kent"],
-    ["What is Wonderwoman's real name?","Dianna Prince"],
-    ["What is Batman's real name?","Bruce Wayne"]
-  ]);
+        <br> const quiz = new Map([
+        ["What is Superman's real name?","Clark Kent"],
+        ["What is Wonderwoman's real name?","Dianna Prince"],
+        ["What is Batman's real name?","Bruce Wayne"]
+        ]);
+        <br> 
 
- // initialize score
-let score = 0;
+        <br> // initialize score
+        <br> let score = 0;
 
-for(const [question,answer] of quiz.entries()){
+        <br> for(const [question,answer] of quiz.entries()){
 
-  // get answer from user
-  const response = prompt(question);
-  // check if answer is correct
-  if(response === answer){
-    alert('Correct!');
-    // increase score by 1
-    score++;
-  } else {
-    alert(`Wrong! The correct answer was ${answer}`);
-  }
-}
+      <br>  // get answer from user
+      <br>  const response = prompt(question);
+      <br>  // check if answer is correct
+      <br>  if(response === answer){
+        <br>  alert('Correct!');
+        <br> // increase score by 1
+        <br> score++;
+        <br>  } else {
+            <br> alert(`Wrong! The correct answer was ${answer}`);
+            <br>  }
+            <br> }
 
-// At the end of the game, report the player's score
-alert(`Game Over, you scored ${score} point${score > 1 ? 's' : ''}`);
+            <br> // At the end of the game, report the player's score
+            <br> alert(`Game Over, you scored ${score} point${score > 1 ? 's' : ''}`);
 
     </main>
 
@@ -54,4 +55,5 @@ alert(`Game Over, you scored ${score} point${score > 1 ? 's' : ''}`);
 
 </body>
 <script src='main.js'></script>
+
 </html>
