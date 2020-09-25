@@ -1,15 +1,19 @@
 // const message = 'Hello World!'
 // alert(message)
 
-// const uniqueID = Symbol('this is a unique ID');
-// console.log(uniqueID);
+const uniqueID = Symbol(`player's unidue ID is:`);
+console.log(uniqueID,math.random);
 // const name = { value: 'Alexa' }; // an object
 // name.value = 'Siri'; // change the value
 
-const btn = document.getElementById('button');
-const rainbow = ['red','orange','yellow','green','blue','rebeccapurple','violet'];
+const backcolor = document.getElementById('background');
 function change() {
     document.body.style.background = rainbow[Math.floor(7 * Math.random())];
+}
+backcolor.addEventListener('click', change);
+
+const btn = document.getElementById('game');
+const rainbow = ['red','orange','yellow','green','blue','rebeccapurple','violet'];
 
     // Set the questions
     const quiz = new Map([
