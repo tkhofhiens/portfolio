@@ -25,36 +25,34 @@
         ["What is Wonderwoman's real name?","Dianna Prince"],
         ["What is Batman's real name?","Bruce Wayne"]
         ]);
-        <br> 
+        <br>
 
         <br> // initialize score
         <br> let score = 0;
 
         <br> for(const [question,answer] of quiz.entries()){
 
-      <br>  // get answer from user
-      <br>  const response = prompt(question);
-      <br>  // check if answer is correct
-      <br>  if(response === answer){
-        <br>  alert('Correct!');
+        <br> // get answer from user
+        <br> const response = prompt(question);
+        <br> // check if answer is correct
+        <br> if(response === answer){
+        <br> alert('Correct!');
         <br> // increase score by 1
         <br> score++;
-        <br>  } else {
-            <br> alert(`Wrong! The correct answer was ${answer}`);
-            <br>  }
-            <br> }
+        <br> } else {
+        <br> alert(`Wrong! The correct answer was ${answer}`);
+        <br> }
+        <br> }
+        <br> // At the end of the game, report the player's score
+        <br> alert(`Game Over, you scored ${score} point${score > 1 ? 's' : ''}`);
 
-            <br> // At the end of the game, report the player's score
-            <br> alert(`Game Over, you scored ${score} point${score > 1 ? 's' : ''}`);
-
-
-            <br>
+        <div>
             <button id='game'>Play Game</button>
+        </div>
+        <div>
             <button id='background'>Change Background</button>
-            <p> <a href="/week2/code2.txt">Code with functions</a></p>
-
-
-
+        </div>
+        <!-- <p> <a href="/week2/code2.txt">Code with functions</a></p> -->
     </main>
 
     <footer>
