@@ -10,6 +10,7 @@
         rel="stylesheet"> -->
     <link rel="stylesheet" href="/portfolio/CSS/normalize.css">
     <link rel="stylesheet" href="/portfolio/CSS/styles.css">
+    <link rel="stylesheet" href="design.css">
 </head>
 <html>
 
@@ -19,45 +20,76 @@
     </header>
     <main>
         <h3>Readings notes</h3>
-        <p>
-            <h4><a href="https://javascript.info/object-methods">Object Methods: this</a></h4>
-            <br> access an object using "this" keyword
-            <br>example this.name // "this" is the "curent object"
-            <br>This allows the same function to utalize different objects and determin the value during runtime.
-            <br>Note: arrow functions don't have their own "this" //Example in code
-            <h4>Calculator Practice</h4>
-            <a href="https://javascript.info/task/calculator">calculator 3 methods</a>
+        <div>
+
+            <p>
+                <h4><a href="https://javascript.info/object-methods" target="_blank">Object Methods: this</a></h4>
+                <br> access an object using "this" keyword
+                <br>example this.name // "this" is the "curent object"
+                <br>This allows the same function to utalize different objects and determin the value during runtime.
+                <br>Note: arrow functions don't have their own "this" //Example in code
+                <h4>Calculator Practice</h4>
+                <a href="https://javascript.info/task/calculator" target="_blank">calculator 3 methods</a>
+
+            </p>
+        </div>
+        <div>
+            <h4>Chapter 5</h4>
             <ul>
-                <li>Reachability</li>
-                <li>Simple</li>
+                <li> Objects </li>
+                create objects as variables with properties
+                <br>const spiderman = {}; // object literal (prefered)
+                <br>const spiderman = new Object(); //object function
+                <br>Nested objects
+                <br>object that contains a list of other objects
+                <br> Note: objects are passed by reference
+                <li>JSON Objects</li> JSON.parse() and JSON.stringify() //example in code
+                <li> Math </li>
+                <li> Regular expressions </li> The global property makes the pattern return all matches. // By default,
+                the
+                pattern only looks for the first occurrence of a match.
+                <br> The ignoreCase property makes the pattern case-insensitive. // By default, they are case sensitive.
+                <br> The multiline property makes the pattern multiline. // By default, a pattern will stop at the end
+                of a line.
+                <li>String Methods</li> split(), match(), search()
             </ul>
-            <br> Advertising – small and simple no pop-up adds
-        </p>
-        <h4>Chapter 5</h4>
-        <p>Objects
-            <br>create objects as variables with properties
-            <br>const spiderman = {}; // object literal (prefered)
-            <br>const spiderman = new Object(); //object function
-            <br>Nested objects
-            <br>object that contains a list of other objects
-            <br> Note: objects are passed by reference
-            <br> ---- JSON Objects ----
-            <br> JSON.parse() and JSON.stringify() //example in code
-            <br> ---- Math ----
-            <br> ---- Regular expressions ----
-        </p>
-        <h4>Chapter 6</h4>
-        <p>Document Object Model
-
-
-        </p>
-        <h4>Chapter 7</h4>
-        <p>Events
-
-
-        </p>
-
-
+            </p>
+        </div>
+        <div>
+            <h4>Chapter 6</h4>
+            <p>Document Object Model (DOM)
+                <ul>
+                    <li>Node</li>getElementBy... // Id(), TagName(), ClassName()
+                    <br>querySelector()
+                    <br>.children .nextSibling .parentNode
+                    <li>Get / Set atributes</li>
+                    className or classList
+                    <li>appendChild()</li>
+                    <li>innerHTML</li>
+                    used to place HTML inside an element
+                    <li>Style</li>updating CSS
+                </ul>
+            </p>
+        </div>
+        <div>
+            <h4>Chapter 7</h4>
+            <p>Events
+                <ul>
+                    <li>Introduction to events</li>allows program to resond when action is taken
+                    <li>Adding event listeners</li>
+                    onclick, doSomething(),
+                    <br>addEventListener()
+                    <li>The event object</li>doSomething(event)
+                    <li>Mouse, keyboard and touch events</li> mousedown and mouseup events
+                    <br>const mouseParagraph = document.getElementById('mouse');
+                    <br> mouseParagraph.addEventListener('mouseover', highlight);
+                    <li>Removing event listeners</li>
+                    <li>Stopping default behavior</li>
+                    <li>Event propagation</li>
+                </ul>
+            </p>
+        </div>
+        <h3>Code Samples</h3>
         <ul>
             <li><a href="code.html">"this" exercizes</a></li>
             <!-- <li><a href="code2.html">Code Sample 2</a></li> -->
