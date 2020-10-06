@@ -20,7 +20,22 @@
     <main>
         This is where I will display some of the code samples from reading assignments.
     </main>
+    <h3>Form Example (from w3 Schools)</h3>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+    Name: <input type="text" name="fname">
+    <input type="submit" value="Submit">
+    </form>
 
+
+    <script>
+    function validateForm() {
+      var x = document.forms["myForm"]["fname"].value;
+      if (x == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+    }
+    </script>
     <footer>
         <p><a href="/portfolio">Home</a> | Tiffany Hofhiens | Copyright 2020</p>
     </footer>
