@@ -26,10 +26,49 @@
             <br> Name: input type="text" name="fname"
             <br> input type="submit" value="Submit"
         </p>
+        <p>
+            <h3>event listener code</h3>
+            <br>const form = document.forms['search'];
+            <br>form.addEventListener ('submit', search, false);
+            <br>function search() {
+            <br>alert(' Form Submitted');
+            <br>}
+        </p>
+        <p>
+            <h3>example of palaceholder</h3>
+            <br>input type='text' name='search-box' placeholder='Search Here'
+        </p>
+
         <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
             Name: <input type="text" name="fname">
             <input type="submit" value="Submit">
         </form>
+
+        <h3>Modular Development</h3>
+        <p>
+        <br>function square(x) {
+        <br>    return x * x;
+        <br>}
+        <br>function sum(array, callback) {
+        <br>if(callback) {
+        <br>array = array.map(callback);
+        <br>
+        <br>return array.reduce((a,b) => a + b );
+        <br>}
+        <br>function variance(array) {
+        <br>return sum(array,square)/array.length - square(mean(array))
+        <br>}
+        <br>function mean(array) {
+        <br>return sum(array) / array.length;
+        <br>}
+        <br>export {
+        <br>variance,
+        <br>mean
+        <br>}
+        <br> ----------------
+        <br>import  { mean, variance } from './stats.js';
+        </p>
+
     </main>
 
 
