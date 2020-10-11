@@ -26,6 +26,10 @@
             <br> Name: input type="text" name="fname"
             <br> input type="submit" value="Submit"
         </p>
+        <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+            Name: <input type="text" name="fname">
+            <input type="submit" value="Submit">
+        </form>
         <p>
             <h3>event listener code</h3>
             <br>const form = document.forms['search'];
@@ -39,10 +43,6 @@
             <br>input type='text' name='search-box' placeholder='Search Here'
         </p>
 
-        <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
-            Name: <input type="text" name="fname">
-            <input type="submit" value="Submit">
-        </form>
 
         <h3>Modular Development</h3>
         <p>
