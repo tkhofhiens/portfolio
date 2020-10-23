@@ -1,0 +1,53 @@
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: cadetblue;
+    padding: 10px;
+    text-align: center;
+
+}
+.todos-wrapper{
+    margin: 10px;
+}
+
+.todo {  
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid gray;
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.todo:hover{
+    background-color: white;
+    opacity: 0.5;
+}
+
+.todo button{
+    width: 25px;
+    height: 25px;
+}
+.todo-delete-btn{
+    background-color: tomato;
+    color: white;
+}
+.todo-content{
+    padding: 5px 10px;
+    width: calc(100% - 50px);
+}
+
+.add-todo-wrapper {
+    position: absolute;
+    bottom: 10px;
+}
+
+footer{
+    text-align: center;
+}
