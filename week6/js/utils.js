@@ -1,6 +1,4 @@
 
-
-
 function activeFilter(todos){
     todos.filter (todo =>{
         return !todo.compleated

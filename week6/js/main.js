@@ -1,7 +1,7 @@
 import utils from './utils.js';
 import ls from './ls.js';
 
-// loadTodos();
+loadTodos();
 
 document.querySelector('#addBtn').onclick = newTodo;
 document.querySelector('#activeFilter').onclick = applyFilter;
