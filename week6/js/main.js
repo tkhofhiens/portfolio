@@ -79,19 +79,21 @@ function deleteTodo(e){
 function toggleComplete(e){
     const btn = e.currentTarget;
     console.log(e.currentTarget);
-    ls.completeTodo(btn.getAttribute('data-id'));
-    console.log(btn.getAttribute('data-id'));
-    // if (btn.getAttribute('completed') === 'false'){
-    //     btn.setAttribute('completed', true);
-    //     btn.innerHTML = '&#10004';  
-    //     console.log(btn.getAttribute('completed'));
-    // } else{
-    //     btn.setAttribute('completed', false);
-    //     btn.innerHTML = ''; 
-    //     console.log(btn.getAttribute('completed'));
-    // }
-    document.querySelector('#todos').innerHTML = '';
-    loadTodos();
+    // ls.completeTodo(btn.getAttribute('data-id'));
+    // console.log(btn.getAttribute('data-id'));
+    console.log(btn.todo);
+    if (btn.getAttribute('completed') === 'false'){
+        btn.setAttribute('completed', true);
+        // completeBtn.setAttribute('todo.completed' = true);
+        btn.innerHTML = '&#10004';  
+        console.log(btn.getAttribute('completed'));
+    } else{
+        btn.setAttribute('completed', false);
+        btn.innerHTML = ''; 
+        console.log(btn.getAttribute('completed'));
+    }
+    // document.querySelector('#todos').innerHTML = '';
+    // loadTodos();
 }
 
 function applyFilter(e){
