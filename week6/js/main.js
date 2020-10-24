@@ -28,7 +28,7 @@ function newTodo(){
 
 function createTodo(){
     const input = document.querySelector('#todoInput');
-    const newTodo = {id: Date.now(), content: input.value, compleated: false}
+    const newTodo = {id: Date.now(), content: input.value, completed: false}
     input.value = '';
     return newTodo;
 }
@@ -80,11 +80,11 @@ function deleteTodo(e){
 function markComplete(e){
     const btn = e.currentTarget;
     console.log(e.currentTarget);
-    // ls.completeTodo(btn.getAttribute('compleated'));
-    // ls.completeTodo(btn.setAttribute('compleated', true));
-    btn.setAttribute('ccompleted', true);
+    // ls.completeTodo(btn.getAttribute('completed'));
+    // ls.completeTodo(btn.setAttribute('completed', true));
+    btn.setAttribute('completed', true);
     btn.innerHTML = 'X';
-    // document.querySelector('compleated').compleated = true;
+    // document.querySelector('completed').completed = true;
 }
 
 function applyFilter(e){
@@ -98,8 +98,8 @@ function applyFilter(e){
     else if (e.currentTarget.id == 'allFilter'){
         filteredTodos = allTodos
     }
-    else if (e.currentTarget.id == 'compleatedFilter'){
-        filteredTodos = utils.compleatedFilter(allTodos)
+    else if (e.currentTarget.id == 'completedFilter'){
+        filteredTodos = utils.completedFilter(allTodos)
     }
 
     filteredTodos.forEach(todo =>{
