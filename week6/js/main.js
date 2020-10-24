@@ -42,7 +42,7 @@ function createTodoElement(todo){
     const completeBtn = document.createElement('button');
     completeBtn.setAttribute('completed', todo.completed);
     completeBtn.classList.add('complete-btn');
-    completeBtn.onclick = markComplete;
+    completeBtn.onclick = toggleComplete;
 
     // todo content 
     const todoContent = document.createElement('div');
@@ -77,21 +77,18 @@ function deleteTodo(e){
     loadTodos();
 }
 
-function markComplete(e){
+function toggleComplete(e){
     const btn = e.currentTarget;
     console.log(e.currentTarget);
-    // // const toDoList = getTodoList();
-    // //     toDoList.forEach(todo => {
-    // //         if (todo.id === id){
-    // //             btn.setAttribute('completed', true);
-    // //         }
-    // //     });
-    // ls.completeTodo(btn.getAttribute('data-id'));
-    // // ls.completeTodo(btn.setAttribute('completed', true));
-    btn.setAttribute('completed', true);
-    btn.innerHTML = 'X';
-    // document.querySelector('#todos').innerHTML = '';
-    // loadTodos();
+    if (btn.getAttribute('completed') === 'false'){
+        btn.setAttribute('completed', true);
+        btn.innerHTML = '&#10004';  
+        console.log(btn.getAttribute('completed'));
+    } else{
+        btn.setAttribute('completed', false);
+        btn.innerHTML = ''; 
+        console.log(btn.getAttribute('completed'));
+    }
 }
 
 function applyFilter(e){
