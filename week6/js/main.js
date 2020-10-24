@@ -1,7 +1,7 @@
 import utils from './utils.js';
 import ls from './ls.js';
 
-loadTodos();
+// loadTodos();
 
 document.querySelector('#addBtn').onclick = newTodo;
 document.querySelector('#activeFilter').onclick = applyFilter;
@@ -80,18 +80,18 @@ function deleteTodo(e){
 function markComplete(e){
     const btn = e.currentTarget;
     console.log(e.currentTarget);
-    // const toDoList = getTodoList();
-    //     toDoList.forEach(todo => {
-    //         if (todo.id === id){
-    //             btn.setAttribute('completed', true);
-    //         }
-    //     });
-    ls.completeTodo(btn.getAttribute('data-id'));
-    // ls.completeTodo(btn.setAttribute('completed', true));
-    // btn.setAttribute('completed', true);
+    // // const toDoList = getTodoList();
+    // //     toDoList.forEach(todo => {
+    // //         if (todo.id === id){
+    // //             btn.setAttribute('completed', true);
+    // //         }
+    // //     });
+    // ls.completeTodo(btn.getAttribute('data-id'));
+    // // ls.completeTodo(btn.setAttribute('completed', true));
+    btn.setAttribute('completed', true);
     btn.innerHTML = 'X';
-    document.querySelector('#todos').innerHTML = '';
-    loadTodos();
+    // document.querySelector('#todos').innerHTML = '';
+    // loadTodos();
 }
 
 function applyFilter(e){
