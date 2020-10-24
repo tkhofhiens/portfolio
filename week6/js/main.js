@@ -11,7 +11,7 @@ document.querySelector('#completedFilter').onclick = applyFilter;
 
 function loadTodos(){
     const todoList = ls.getTodoList();
-    
+
     todoList.forEach(todo => {
         const el = createTodoElement(todo)
         addToList(el);
@@ -88,7 +88,7 @@ function markComplete(e){
     //     });
     // utils.completeTodo(btn.getAttribute('data-id'));
     // ls.completeTodo(btn.setAttribute('completed', true));
-    // btn.setAttribute('completed', true);
+    btn.setAttribute('completed', true);
     btn.innerHTML = 'X';
 }
 

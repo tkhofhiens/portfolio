@@ -19,7 +19,7 @@ function getTodoList(){
     if (todoListString){
         todoList = JSON.parse(todoListString);
     }
-
+    
     return todoList;
 }
 
