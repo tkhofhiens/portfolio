@@ -80,6 +80,7 @@ function toggleComplete(e){
     const btn = e.currentTarget;
     console.log(e.currentTarget);
     ls.completeTodo(btn.getAttribute('data-id'));
+    console.log('data-id');
     // if (btn.getAttribute('completed') === 'false'){
     //     btn.setAttribute('completed', true);
     //     btn.innerHTML = '&#10004';  
