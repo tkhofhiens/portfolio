@@ -79,17 +79,16 @@ function deleteTodo(e){
 function toggleComplete(e){
     const btn = e.currentTarget;
     console.log(e.currentTarget);
-    console.log('completed Btn is ',btn.completeBtn);
-    console.log('completed is ',btn.completed);
     if (btn.getAttribute('completed') === 'false'){
         btn.setAttribute('completed', true);
         btn.innerHTML = '&#10004';  
-        console.log(btn.getAttribute('completed'));
+        console.log('btn.getAttribute completed is ',btn.getAttribute('completed'));
     } else{
         btn.setAttribute('completed', false);
         btn.innerHTML = ''; 
-        console.log(btn.getAttribute('completed'));
+        console.log('btn.getAttribute completed is ',btn.getAttribute('completed'));
     }
+
 }
 
 function applyFilter(e){
