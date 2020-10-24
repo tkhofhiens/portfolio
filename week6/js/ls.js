@@ -31,6 +31,7 @@ function updateTodo(id, status){
     toDoList.forEach(todo => {
         console.log(todo.id);
         if (todo.id === id){
+            console.log('ls completed ',todo.completed);
             todo.completed = status;
         }
         //     console.log(btn.getAttribute('completed'));

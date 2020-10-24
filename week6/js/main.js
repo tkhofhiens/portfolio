@@ -42,6 +42,9 @@ function createTodoElement(todo){
     completeBtn.setAttribute('data-id', todo.id);
     completeBtn.setAttribute('completed', todo.completed);
     completeBtn.classList.add('complete-btn');
+    if (todo.completed === true){
+        completedBtn.innerHTML = '&#10004';
+    }
     completeBtn.onclick = toggleComplete;
 
     // todo content 
@@ -81,15 +84,16 @@ function toggleComplete(e){
     const btn = e.currentTarget;
     console.log(e.currentTarget);
     if (btn.getAttribute('completed') === 'false'){
-        let status = btn.setAttribute('completed', true);
-        btn.innerHTML = '&#10004';
-        ls.updateTodo(btn.id, status);
+        // let ststus = true;
+        // let status = btn.setAttribute('completed', true);
+        // btn.innerHTML = '&#10004';
+        ls.updateTodo(btn.id, true);
         // btn.parent.  
         // console.log('btn.getAttribute completed is ',btn.getAttribute('completed'));
     } else{
-        btn.setAttribute('completed', false);
-        btn.innerHTML = '';
-        ls.updateTodo(btn.id, status);
+        // btn.setAttribute('completed', false);
+        // btn.innerHTML = '';
+        ls.updateTodo(btn.id, false);
         // console.log('btn.getAttribute completed is ',btn.getAttribute('completed'));
     }
     document.querySelector('#todos').innerHTML = '';
