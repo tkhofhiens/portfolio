@@ -79,12 +79,11 @@ function deleteTodo(e){
 function toggleComplete(e){
     const btn = e.currentTarget;
     console.log(e.currentTarget);
-    // ls.completeTodo(btn.getAttribute('data-id'));
-    // console.log(btn.getAttribute('data-id'));
-    console.log(btn.todo);
+    console.log('completed Btn is ',btn.completeBtn);
+    console.log('completed is ',btn.completed);
+    console.log('todo.completed is ',btn.todo.completed);
     if (btn.getAttribute('completed') === 'false'){
         btn.setAttribute('completed', true);
-        // completeBtn.setAttribute('todo.completed' = true);
         btn.innerHTML = '&#10004';  
         console.log(btn.getAttribute('completed'));
     } else{
