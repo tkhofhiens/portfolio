@@ -6,7 +6,7 @@ loadTodos();
 document.querySelector('#addBtn').onclick = newTodo;
 document.querySelector('#activeFilter').onclick = applyFilter;
 document.querySelector('#allFilter').onclick = applyFilter;
-document.querySelector('#compleatedFilter').onclick = applyFilter;
+document.querySelector('#completedFilter').onclick = applyFilter;
 
 
 function loadTodos(){
@@ -40,7 +40,7 @@ function createTodoElement(todo){
 
     // complete btn
     const completeBtn = document.createElement('button');
-    completeBtn.setAttribute('compleated', todo.compleated);
+    completeBtn.setAttribute('completed', todo.completed);
     completeBtn.classList.add('complete-btn');
     completeBtn.onclick = markComplete;
 
@@ -82,7 +82,7 @@ function markComplete(e){
     console.log(e.currentTarget);
     // ls.completeTodo(btn.getAttribute('compleated'));
     // ls.completeTodo(btn.setAttribute('compleated', true));
-    btn.setAttribute('compleated', true);
+    btn.setAttribute('ccompleted', true);
     btn.innerHTML = 'X';
     // document.querySelector('compleated').compleated = true;
 }

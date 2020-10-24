@@ -1,18 +1,18 @@
 
 function activeFilter(todos){
     todos.filter (todo =>{
-        return !todo.compleated
+        return !todo.completed
     })
 }
 
-function compleatedFilter(todos){
+function completedFilter(todos){
     todos.filter (todo =>{
-        return todo.compleated
+        return todo.completed
     })
 }
 
 
 export default{
     activeFilter,
-    compleatedFilter
+    completedFilter
 }
