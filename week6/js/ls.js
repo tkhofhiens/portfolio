@@ -26,9 +26,11 @@ function getTodoList(){
 function completeTodo(id){
     const toDoList = getTodoList();
     // find the todo item in list
+    console.log(id);
     toDoList.forEach(todo => {
+        console.log(todo.id);
         if (todo.id === id){
-            console.log(todo.id);
+            console.log(btn.getAttribute('completed'));
             // update the completed status and view
             if (btn.getAttribute('completed') === 'false'){
                 btn.setAttribute('completed', true);
