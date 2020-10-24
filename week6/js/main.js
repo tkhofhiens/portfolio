@@ -81,7 +81,7 @@ function toggleComplete(e){
     console.log(e.currentTarget);
     console.log('completed Btn is ',btn.completeBtn);
     console.log('completed is ',btn.completed);
-    console.log('todo.completed is ',btn.todo.completed);
+    console.log('todo.completed is ',todo.completed);
     if (btn.getAttribute('completed') === 'false'){
         btn.setAttribute('completed', true);
         btn.innerHTML = '&#10004';  
@@ -91,8 +91,6 @@ function toggleComplete(e){
         btn.innerHTML = ''; 
         console.log(btn.getAttribute('completed'));
     }
-    // document.querySelector('#todos').innerHTML = '';
-    // loadTodos();
 }
 
 function applyFilter(e){
