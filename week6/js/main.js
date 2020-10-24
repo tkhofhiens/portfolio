@@ -1,7 +1,7 @@
 import utils from './utils.js';
 import ls from './ls.js';
 
-// loadTodos();
+loadTodos();
 
 document.querySelector('#addBtn').onclick = newTodo;
 document.querySelector('#activeFilter').onclick = applyFilter;
@@ -86,10 +86,12 @@ function markComplete(e){
     //             btn.setAttribute('completed', true);
     //         }
     //     });
-    // utils.completeTodo(btn.getAttribute('data-id'));
+    ls.completeTodo(btn.getAttribute('data-id'));
     // ls.completeTodo(btn.setAttribute('completed', true));
-    btn.setAttribute('completed', true);
+    // btn.setAttribute('completed', true);
     btn.innerHTML = 'X';
+    document.querySelector('#todos').innerHTML = '';
+    loadTodos();
 }
 
 function applyFilter(e){
