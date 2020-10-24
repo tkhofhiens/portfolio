@@ -42,8 +42,7 @@ function updateTodo(id, status){
         //         btn.setAttribute('completed', false);
         //         btn.innerHTML = ''; 
         //         console.log(btn.getAttribute('completed'));
-        //     }
-        
+        //     }  
     });
     // update the ls
     localStorage.setItem('toDoList', JSON.stringify(toDoList));
@@ -52,6 +51,6 @@ function updateTodo(id, status){
 export default{
     saveTodo,
     deleteTodo,
-    // completeTodo,
+    updateTodo,
     getTodoList
 }
