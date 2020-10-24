@@ -1,7 +1,7 @@
 import utils from './utils.js';
 import ls from './ls.js';
 
-// loadTodos();
+loadTodos();
 
 document.querySelector('#addBtn').onclick = newTodo;
 document.querySelector('#activeFilter').onclick = applyFilter;
@@ -16,7 +16,6 @@ function loadTodos(){
         const el = createTodoElement(todo)
         addToList(el);
     });
-    
 }
 
 function newTodo(){
@@ -80,15 +79,18 @@ function deleteTodo(e){
 function toggleComplete(e){
     const btn = e.currentTarget;
     console.log(e.currentTarget);
-    if (btn.getAttribute('completed') === 'false'){
-        btn.setAttribute('completed', true);
-        btn.innerHTML = '&#10004';  
-        console.log(btn.getAttribute('completed'));
-    } else{
-        btn.setAttribute('completed', false);
-        btn.innerHTML = ''; 
-        console.log(btn.getAttribute('completed'));
-    }
+    ls.completeTodo(btn.getAttribute('data-id'));
+    // if (btn.getAttribute('completed') === 'false'){
+    //     btn.setAttribute('completed', true);
+    //     btn.innerHTML = '&#10004';  
+    //     console.log(btn.getAttribute('completed'));
+    // } else{
+    //     btn.setAttribute('completed', false);
+    //     btn.innerHTML = ''; 
+    //     console.log(btn.getAttribute('completed'));
+    // }
+    document.querySelector('#todos').innerHTML = '';
+    loadTodos();
 }
 
 function applyFilter(e){

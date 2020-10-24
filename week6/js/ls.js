@@ -23,21 +23,31 @@ function getTodoList(){
     return todoList;
 }
 
-// function completeTodo(id){
-//     const toDoList = getTodoList();
-
-//     const updatedTodos = 
-//         toDoList.forEach(todo => {
-//             if (todo.id === id){
-//                 btn.setAttribute('completed', true);
-//             }
-//         });
-//     localStorage.setItem('toDoList', JSON.stringify(updatedTodos));
-// }
+function completeTodo(id){
+    const toDoList = getTodoList();
+    // find the todo item in list
+    const updatedTodos = 
+        toDoList.forEach(todo => {
+            if (todo.id === id){
+                // update the completed status and view
+                if (btn.getAttribute('completed') === 'false'){
+                    btn.setAttribute('completed', true);
+                    btn.innerHTML = '&#10004';  
+                    console.log(btn.getAttribute('completed'));
+                } else{
+                    btn.setAttribute('completed', false);
+                    btn.innerHTML = ''; 
+                    console.log(btn.getAttribute('completed'));
+                }  
+            }
+        });
+    // update the ls
+    localStorage.setItem('toDoList', JSON.stringify(updatedTodos));
+}
 
 export default{
     saveTodo,
     deleteTodo,
-    // completeTodo,
+    completeTodo,
     getTodoList
 }
