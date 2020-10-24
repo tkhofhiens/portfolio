@@ -16,9 +16,9 @@ function getTodoList(){
     const todoListString = localStorage.getItem('toDoList');
     let todoList = [];
 
-    if (todoListString){
-        todoList = JSON.parse(todoListString);
-    }
+    // if (todoListString){
+    //     todoList = JSON.parse(todoListString);
+    // }
 
     return todoList;
 }
@@ -26,7 +26,7 @@ function getTodoList(){
 function completeTodo(id){
     const toDoList = getTodoList();
     // find the todo item in list
-    const updatedTodos = 
+    
         toDoList.forEach(todo => {
             if (todo.id === id){
                 // update the completed status and view
@@ -41,8 +41,9 @@ function completeTodo(id){
                 }  
             }
         });
+
     // update the ls
-    localStorage.setItem('toDoList', JSON.stringify(updatedTodos));
+    localStorage.setItem('toDoList', JSON.stringify(toDoList));
 }
 
 export default{
