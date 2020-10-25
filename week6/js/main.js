@@ -43,7 +43,7 @@ function createTodoElement(todo){
     completeBtn.setAttribute('completed', todo.completed);
     completeBtn.classList.add('complete-btn');
     if (todo.completed === true){
-        completedBtn.innerHTML = '&#10004';
+        completeBtn.innerHTML = '&#10004';
     }
     completeBtn.onclick = toggleComplete;
 
