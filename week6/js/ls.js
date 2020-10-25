@@ -28,13 +28,11 @@ function updateTodo(id, status){
     // find the todo item in list
     console.log('UpdateTodo Function: id ', id, 'status', status);
     toDoList.forEach(todo =>{
-        console.log('todo id', todo.id);
+        console.log('todo id', todo.id, 'todo comp', todo.completed);
         if(todo.id === id){
-            console.log('todo comp', todo.completed);
             todo.completed = status;
             console.log('ls completed ', todo.completed, 'was updated');
         }
-  
     });
 
     // update the ls
