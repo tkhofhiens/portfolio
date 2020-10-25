@@ -85,19 +85,13 @@ function toggleComplete(e){
     console.log(e.currentTarget);
     if (btn.getAttribute('completed') === 'false'){
         let status = true;
-        // let status = btn.setAttribute('completed', true);
-        // btn.innerHTML = '&#10004';
+        btn.innerHTML = '&#10004';
         // console.log('Toggle Loop - id ', btn.getAttribute('data-id'), 'status', status);
-        ls.updateTodo(btn.getAttribute('data-id'), true);
-        // btn.parent.  
+        ls.updateTodo(btn.getAttribute('data-id'), status);
         
     } else{
         let status = false;
-        // btn.setAttribute('completed', false);
-        // btn.innerHTML = '';
-        // console.log('id ', btn.getAttribute('data-id'), 'status', status);
         ls.updateTodo(btn.getAttribute('data-id'), status);
-        // console.log('btn.getAttribute completed is ',btn.getAttribute('completed'));
     }
     document.querySelector('#todos').innerHTML = '';
     loadTodos();
