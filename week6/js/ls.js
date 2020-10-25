@@ -26,11 +26,11 @@ function getTodoList(){
 function updateTodo(id, status){
     const toDoList = getTodoList();
     // find the todo item in list
-    console.log('UpdateTodo Function: id ', id, 'status', status, 'todo id', todo.id);
+    console.log('UpdateTodo Function: id ', id, 'status', status);
     toDoList.forEach(todo =>{
-        // console.log(todo.id);
+        console.log('todo id', todo.id);
         if(todo.id === id){
-            console.log(todo.id);
+            console.log('todo comp', todo.completed);
             todo.completed = status;
             console.log('ls completed ', todo.completed, 'was updated');
         }
