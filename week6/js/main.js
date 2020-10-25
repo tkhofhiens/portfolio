@@ -84,16 +84,18 @@ function toggleComplete(e){
     const btn = e.currentTarget;
     console.log(e.currentTarget);
     if (btn.getAttribute('completed') === 'false'){
-        // let ststus = true;
+        let status = true;
         // let status = btn.setAttribute('completed', true);
         // btn.innerHTML = '&#10004';
-        ls.updateTodo(btn.id, true);
+        ls.updateTodo(btn.id, status);
         // btn.parent.  
-        // console.log('btn.getAttribute completed is ',btn.getAttribute('completed'));
+        console.log('id ',btn.id, 'status', status);
     } else{
+        let status = false;
         // btn.setAttribute('completed', false);
         // btn.innerHTML = '';
         ls.updateTodo(btn.id, false);
+        console.log('id ',btn.id, 'status', status);
         // console.log('btn.getAttribute completed is ',btn.getAttribute('completed'));
     }
     document.querySelector('#todos').innerHTML = '';
