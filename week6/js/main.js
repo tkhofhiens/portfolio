@@ -89,7 +89,7 @@ function toggleComplete(e){
         // btn.innerHTML = '&#10004';
         ls.updateTodo(btn.getAttribute('data-id'), status);
         // btn.parent.  
-        console.log('id ', btn.getAttribute('data-id'), 'status', status);
+        console.log('Toggle Loop - id ', btn.getAttribute('data-id'), 'status', status);
     } else{
         let status = false;
         // btn.setAttribute('completed', false);
