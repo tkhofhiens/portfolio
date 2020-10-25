@@ -62,7 +62,7 @@ function createTodoElement(todo){
     todoDiv.appendChild(completeBtn);
     todoDiv.appendChild(todoContent);
     todoDiv.appendChild(deleteBtn);
-    console.log(todoDiv);
+    // console.log(todoDiv);
     return todoDiv;
 }
 
