@@ -85,7 +85,7 @@ function toggleComplete(e){
     console.log(e.currentTarget);
     if (btn.getAttribute('completed') === 'false'){
         let status = true;
-        btn.innerHTML = '&#10004';
+        // btn.innerHTML = '&#10004';
         // console.log('Toggle Loop - id ', btn.getAttribute('data-id'), 'status', status);
         ls.updateTodo(btn.getAttribute('data-id'), status);
         
