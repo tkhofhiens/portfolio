@@ -28,7 +28,7 @@ function updateTodo(id, status){
     // find the todo item in list
     console.log(id);
     toDoList.forEach(todo =>{
-        // console.log(todo.id);
+        console.log(todo.id);
         if (todo.id === id){
             console.log(todo.id);
             console.log('ls completed ',todo.completed);

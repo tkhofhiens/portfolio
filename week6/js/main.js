@@ -87,15 +87,15 @@ function toggleComplete(e){
         let status = true;
         // let status = btn.setAttribute('completed', true);
         // btn.innerHTML = '&#10004';
-        ls.updateTodo(btn.id, status);
+        ls.updateTodo(btn.getAttribute(data-id), status);
         // btn.parent.  
-        console.log('id ',btn.id, 'status', status);
+        console.log('id ', btn.getAttribute(data-id), 'status', status);
     } else{
         let status = false;
         // btn.setAttribute('completed', false);
         // btn.innerHTML = '';
-        ls.updateTodo(btn.id, false);
-        console.log('id ',btn.id, 'status', status);
+        ls.updateTodo(btn.getAttribute(data-id), false);
+        console.log('id ', btn.getAttribute(data-id), 'status', status);
         // console.log('btn.getAttribute completed is ',btn.getAttribute('completed'));
     }
     document.querySelector('#todos').innerHTML = '';
