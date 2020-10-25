@@ -27,16 +27,17 @@ function updateTodo(id, status){
     const toDoList = getTodoList();
     // find the todo item in list
     console.log('updateTodo Function: id ', id, 'status', status);
-    let updatedList = toDoList.forEach(todo =>{
+    toDoList.forEach(todo =>{
         console.log('todo id', todo.id, 'comp', todo.completed);
         if(todo.id === id){
             todo.completed = status;
             console.log('ls completed ', todo.completed, 'was updated');
         }
+        console.log('list ',toDoList);
     });
 
     // update the ls
-    localStorage.setItem('toDoList', JSON.stringify(updatedList));
+    localStorage.setItem('toDoList', JSON.stringify(toDoList));
 }
 
 export default{
