@@ -23,21 +23,8 @@ function getTodoList(){
     return todoList;
 }
 
-// function completeTodo(id){
-//     const toDoList = getTodoList();
-
-//     const updatedTodos = 
-//         toDoList.forEach(todo => {
-//             if (todo.id === id){
-//                 btn.setAttribute('completed', true);
-//             }
-//         });
-//     localStorage.setItem('toDoList', JSON.stringify(updatedTodos));
-// }
-
 export default{
     saveTodo,
     deleteTodo,
-    // completeTodo,
     getTodoList
 }

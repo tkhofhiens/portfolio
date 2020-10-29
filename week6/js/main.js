@@ -1,13 +1,9 @@
 import utils from './utils.js';
 import ls from './ls.js';
 
-// loadTodos();
-
 document.querySelector('#addBtn').onclick = newTodo;
-document.querySelector('#activeFilter').onclick = applyFilter;
-document.querySelector('#allFilter').onclick = applyFilter;
-document.querySelector('#completedFilter').onclick = applyFilter;
 
+loadTodos();
 
 function loadTodos(){
     const todoList = ls.getTodoList();
@@ -42,7 +38,6 @@ function createTodoElement(todo){
     const completeBtn = document.createElement('button');
     completeBtn.setAttribute('completed', todo.completed);
     completeBtn.classList.add('complete-btn');
-    completeBtn.onclick = markComplete;
 
     // todo content 
     const todoContent = document.createElement('div');
@@ -77,40 +72,32 @@ function deleteTodo(e){
     loadTodos();
 }
 
-function markComplete(e){
-    const btn = e.currentTarget;
-    console.log(e.currentTarget);
-    // // const toDoList = getTodoList();
-    // //     toDoList.forEach(todo => {
-    // //         if (todo.id === id){
-    // //             btn.setAttribute('completed', true);
-    // //         }
-    // //     });
-    // ls.completeTodo(btn.getAttribute('data-id'));
-    // // ls.completeTodo(btn.setAttribute('completed', true));
-    btn.setAttribute('completed', true);
-    btn.innerHTML = 'X';
-    // document.querySelector('#todos').innerHTML = '';
-    // loadTodos();
-}
 
-function applyFilter(e){
-    document.querySelector('#todos').innerHTML = '';
-    let filteredTodos = [];
-    const allTodos = ls.getTodoList();
+// loadTodos();
 
-    if (e.currentTarget.id == 'activeFilter'){
-        filteredTodos = utils.activeFilter(allTodos)
-    }
-    else if (e.currentTarget.id == 'allFilter'){
-        filteredTodos = allTodos
-    }
-    else if (e.currentTarget.id == 'completedFilter'){
-        filteredTodos = utils.completedFilter(allTodos)
-    }
+// document.querySelector('#activeFilter').onclick = applyFilter;
+// document.querySelector('#allFilter').onclick = applyFilter;
+// document.querySelector('#completedFilter').onclick = applyFilter;
 
-    filteredTodos.forEach(todo =>{
-        const el = createTodoElement(todo)
-        addToList(el)
-    })
-}
+
+// function applyFilter(e){
+//     document.querySelector('#todos').innerHTML = '';
+//     let filteredTodos = [];
+//     const allTodos = ls.getTodoList();
+
+//     if (e.currentTarget.id == 'activeFilter'){
+//         filteredTodos = utils.activeFilter(allTodos)
+//     }
+//     else if (e.currentTarget.id == 'allFilter'){
+//         filteredTodos = allTodos
+//     }
+//     else if (e.currentTarget.id == 'completedFilter'){
+//         filteredTodos = utils.completedFilter(allTodos)
+//     }
+
+//     filteredTodos.forEach(todo =>{
+//         const el = createTodoElement(todo)
+//         addToList(el)
+//     })
+
+// }
