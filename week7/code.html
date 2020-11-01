@@ -27,6 +27,34 @@
         <br> reject(error);
         <br> }
         <br> });
+
+        <h3>Curried Example</h3>
+        <br> function multiplier(x,y) {
+        <br> if (y === undefined) {
+        <br> return function(z) {
+        <br> return x * z;
+        <br> }
+        <br> } else {
+        <br> return x * y;
+        <br> }
+        <br> }
+
+        <h3>Fetch API</h3>
+        <br> const url = 'https:example.com/data';
+        <br>const headers = new Headers({ 'Content-Type': 'text/plain', 'Accept-Charset' : 'utf-8',
+        'Accept-Encoding':'gzip,deflate' })
+        <br>const request = (url,{
+        <br>headers: headers
+        <br>})
+        <br>fetch(request)
+        <br>.then( function(response) {
+        <br>if(response.ok) {
+        <br>return response;
+        <br>}
+        <br>throw Error(response.statusText);
+        <br>})
+        <br>.then( response => // do something with response )
+        <br>.catch( error => console.log('There was an error!') )
     </main>
 
     <footer>
