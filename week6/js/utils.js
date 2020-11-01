@@ -1,12 +1,12 @@
 
 function activeFilter(todos){
-    todos.filter (todo =>{
+    return todos.filter (todo =>{
         return !todo.completed
     })
 }
 
 function completedFilter(todos){
-    todos.filter (todo =>{
+    return todos.filter (todo =>{
         return todo.completed
     })
 }
