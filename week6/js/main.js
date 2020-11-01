@@ -1,11 +1,8 @@
 import utils from './utils.js';
 import ls from './ls.js';
 
-<<<<<<< HEAD
-=======
 loadTodos();
 
->>>>>>> 80b5ccffe0494e63e28515d5705c8bb752c9689d
 document.querySelector('#addBtn').onclick = newTodo;
 
 loadTodos();
@@ -43,13 +40,10 @@ function createTodoElement(todo){
     completeBtn.setAttribute('data-id', todo.id);
     completeBtn.setAttribute('completed', todo.completed);
     completeBtn.classList.add('complete-btn');
-<<<<<<< HEAD
-=======
     if (todo.completed === true){
         completeBtn.innerHTML = '&#10004';
     }
     completeBtn.onclick = toggleComplete;
->>>>>>> 80b5ccffe0494e63e28515d5705c8bb752c9689d
 
     // todo content 
     const todoContent = document.createElement('div');
@@ -84,8 +78,6 @@ function deleteTodo(e){
     loadTodos();
 }
 
-<<<<<<< HEAD
-=======
 function toggleComplete(e){
     const btn = e.currentTarget;
     console.log(e.currentTarget);
@@ -102,7 +94,6 @@ function toggleComplete(e){
     document.querySelector('#todos').innerHTML = '';
     loadTodos();
 }
->>>>>>> 80b5ccffe0494e63e28515d5705c8bb752c9689d
 
 // loadTodos();
 
