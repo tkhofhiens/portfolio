@@ -5,13 +5,7 @@ var list = '{ "scriptures" : [' +
   '{ "Refrence": "1 Corinthians 2:5, 9–11", "KeyPhrase": " We can only know the things of God through the Spirit","Topic": "Acquiring Spiritual Knowledge","Book": "NT"} ]}';
 
 
-  var text = '{"employees":[' +
-  '{"firstName":"John","lastName":"Doe" },' +
-  '{"firstName":"Anna","lastName":"Smith" },' +
-  '{"firstName":"Peter","lastName":"Jones" }]}';
-
   export default{
-    list,
-    text 
+    list
 }
 

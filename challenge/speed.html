@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="module" src="js/ls.js"></script>
+    <script type="text/javascript" src="js/scripture.json"></script>
+    <script type="text/javascript">
+        function load() {
+            var mydata = JSON.parse(data);
+            alert(mydata.length);
+
+            var div = document.getElementById('data');
+
+            for (var i = 0; i < mydata.length; i++) {
+                div.innerHTML = div.innerHTML + "<p class='inner' id=" + i + ">" + mydata[i].Refrence + "</p>" + "<br>";
+            }
+        }
+    </script>
+
+
 </head>
 <style>
     h1 {
@@ -21,19 +36,17 @@
         <h1>Team 1</h1>
     </header>
 
-
-
     <h1>Phrase</h1>
-    <!-- <ul>
-    <li>refrence 1</li>
-    <li>refrence 2</li>
-    <li>refrence 3</li>
-    <li>refrence 4</li>
-</ul> -->
 
     <p id="demo"></p>
 
-    <!-- <p id="test"></p> -->
+    <p id="test"></p>
+
+    <div onload="load()">
+        <div id="data">
+
+        </div>
+    </div>
 
     <button>submit</button>
 
@@ -44,7 +57,7 @@
     </div>
 
     <footer>
-        
+
     </footer>
 </body>
 
