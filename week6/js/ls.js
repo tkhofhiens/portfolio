@@ -23,11 +23,6 @@ function getTodoList(){
     return todoList;
 }
 
-<<<<<<< HEAD
-export default{
-    saveTodo,
-    deleteTodo,
-=======
 function updateTodo(id, status){
     const toDoList = getTodoList();
     // find the todo item in list
@@ -50,7 +45,6 @@ export default{
     saveTodo,
     deleteTodo,
     updateTodo,
->>>>>>> 80b5ccffe0494e63e28515d5705c8bb752c9689d
     getTodoList
 }
 

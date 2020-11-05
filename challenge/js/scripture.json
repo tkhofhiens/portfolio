@@ -1,0 +1,602 @@
+[
+    {
+      "Refrence": "Proverbs 3:5–6",
+      "KeyPhrase": " Trust in the Lord with all thine heart, and He shall direct thy paths",
+      "Topic": "Acquiring Spiritual Knowledge",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "Isaiah 5:20",
+      "KeyPhrase": " Woe unto them that call evil good, and good evil",
+      "Topic": "Acquiring Spiritual Knowledge",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "John 7:17",
+      "KeyPhrase": " Do God’s will to know His doctrine",
+      "Topic": "Acquiring Spiritual Knowledge",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "1 Corinthians 2:5, 9–11",
+      "KeyPhrase": " We can only know the things of God through the Spirit",
+      "Topic": "Acquiring Spiritual Knowledge",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "2 Timothy 3:15–17",
+      "KeyPhrase": " Scriptures can make you wise unto salvation",
+      "Topic": "Acquiring Spiritual Knowledge",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "James 1:5–6",
+      "KeyPhrase": " If you lack wisdom, ask God",
+      "Topic": "Acquiring Spiritual Knowledge",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "2 Nephi 28:30",
+      "KeyPhrase": " God gives knowledge line upon line",
+      "Topic": "Acquiring Spiritual Knowledge",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "2 Nephi 32:3",
+      "KeyPhrase": " If we feast upon the words of Christ, we can know all things that we should do",
+      "Topic": "Acquiring Spiritual Knowledge",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "2 Nephi 32:8–9",
+      "KeyPhrase": " If we pray always, God will consecrate our performance for the welfare of our souls",
+      "Topic": "Acquiring Spiritual Knowledge",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "Mosiah 4:9",
+      "KeyPhrase": " Believe in God and that He has all wisdom",
+      "Topic": "Acquiring Spiritual Knowledge",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "Ether 12:6",
+      "KeyPhrase": " A witness comes after the trial of faith",
+      "Topic": "Acquiring Spiritual Knowledge",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "Moroni 10:4–5",
+      "KeyPhrase": " The Holy Ghost reveals truth to those who ask God with real intent",
+      "Topic": "Acquiring Spiritual Knowledge",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "D&C 6:36",
+      "KeyPhrase": " Look unto Christ in every thought",
+      "Topic": "Acquiring Spiritual Knowledge",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "D&C 8:2–3",
+      "KeyPhrase": " The Holy Ghost speaks to our minds and hearts",
+      "Topic": "Acquiring Spiritual Knowledge",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "D&C 88:118",
+      "KeyPhrase": " Seek learning by study and faith",
+      "Topic": "Acquiring Spiritual Knowledge",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "Hebrews 12:9",
+      "KeyPhrase": " God is the Father of our spirits",
+      "Topic": "The Godhead",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "2 Nephi 26:33",
+      "KeyPhrase": " All are alike unto God",
+      "Topic": "The Godhead",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "3 Nephi 11:10–11",
+      "KeyPhrase": " Jesus Christ suffered the will of the Father in all things",
+      "Topic": "The Godhead",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "3 Nephi 12:48",
+      "KeyPhrase": " Jesus Christ invites us to become perfect",
+      "Topic": "The Godhead",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "3 Nephi 18:15, 20–21",
+      "KeyPhrase": "Watch and pray always in the name of Jesus Christ",
+      "Topic": "The Godhead",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "D&C 29:10–11",
+      "KeyPhrase": "Christ will come again with power and glory",
+      "Topic": "The Godhead",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "D&C 130:22–23",
+      "KeyPhrase": "The Father and Son have bodies of flesh and bone",
+      "Topic": "The Godhead",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "Moses 1:39",
+      "KeyPhrase": " God’s work and glory is to bring to pass the immortality and eternal life of man",
+      "Topic": "The Plan of Salvation",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "Abraham 3:22–23",
+      "KeyPhrase": " Abraham was chosen before he was born",
+      "Topic": "The Plan of Salvation",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "Genesis 1:26–27",
+      "KeyPhrase": " God created man in His own image",
+      "Topic": "The Plan of Salvation",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "Joshua 24:15",
+      "KeyPhrase": " Choose you this day whom ye will serve",
+      "Topic": "The Plan of Salvation",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "John 17:3",
+      "KeyPhrase": " Eternal life is knowing God and Jesus Christ",
+      "Topic": "The Plan of Salvation",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "1 Corinthians 6:19–20",
+      "KeyPhrase": " Your body is a temple",
+      "Topic": "The Plan of Salvation",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "1 Corinthians 15:20–22",
+      "KeyPhrase": " In Christ shall all be resurrected",
+      "Topic": "The Plan of Salvation",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "1 Corinthians 15:40–42",
+      "KeyPhrase": " There are three degrees of glory in the Resurrection",
+      "Topic": "The Plan of Salvation",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "1 Peter 4:6",
+      "KeyPhrase": " The gospel is preached to the dead",
+      "Topic": "The Plan of Salvation",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "Revelation 20:12",
+      "KeyPhrase": " Each person will stand before God to be judged",
+      "Topic": "The Plan of Salvation",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "2 Nephi 2:22–25",
+      "KeyPhrase": " Adam fell that men might be",
+      "Topic": "The Plan of Salvation",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "2 Nephi 2:27",
+      "KeyPhrase": " We are free to choose",
+      "Topic": "The Plan of Salvation",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "D&C 76:22–24",
+      "KeyPhrase": " Jesus Christ lives and is the Creator of worlds",
+      "Topic": "The Plan of Salvation",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "Isaiah 1:18",
+      "KeyPhrase": " If we repent, our sins will be as white as snow",
+      "Topic": "The Atonement of Jesus Christ",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "Isaiah 53:3–5",
+      "KeyPhrase": " Jesus Christ bore our griefs and suffered for our sins",
+      "Topic": "The Atonement of Jesus Christ",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "Matthew 11:28–30",
+      "KeyPhrase": " If we come unto Jesus Christ, He will ease our burdens and give us rest",
+      "Topic": "The Atonement of Jesus Christ",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "Luke 24:36–39",
+      "KeyPhrase": " Jesus Christ was resurrected with a body of flesh and bone",
+      "Topic": "The Atonement of Jesus Christ",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "James 2:17–18",
+      "KeyPhrase": " Faith without works is dead",
+      "Topic": "The Atonement of Jesus Christ",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "Mosiah 3:19",
+      "KeyPhrase": " Put off the natural man and become a Saint through the Atonement",
+      "Topic": "The Atonement of Jesus Christ",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "Alma 7:11–13",
+      "KeyPhrase": " Jesus Christ experienced our pains and overcame sin and death",
+      "Topic": "The Atonement of Jesus Christ",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "Alma 34:9–10",
+      "KeyPhrase": " There must be an Atonement made",
+      "Topic": "The Atonement of Jesus Christ",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "Helaman 5:12",
+      "KeyPhrase": " Build your foundation on Christ",
+      "Topic": "The Atonement of Jesus Christ",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "Ether 12:27",
+      "KeyPhrase": " The Savior can make weak things strong",
+      "Topic": "The Atonement of Jesus Christ",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "D&C 18:10–11",
+      "KeyPhrase": " The worth of souls is great",
+      "Topic": "The Atonement of Jesus Christ",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "D&C 19:16–19",
+      "KeyPhrase": " The Savior suffered for our sins so we could repent",
+      "Topic": "The Atonement of Jesus Christ",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "D&C 58:42–43",
+      "KeyPhrase": " To repent we must confess and forsake sin",
+      "Topic": "The Atonement of Jesus Christ",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "Moses 7:18",
+      "KeyPhrase": " Zion–one heart and one mind in righteousness",
+      "Topic": "The Restoration",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "Isaiah 29:13–14",
+      "KeyPhrase": " The Restoration is a marvelous work and a wonder",
+      "Topic": "The Restoration",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "Ezekiel 37:15–17",
+      "KeyPhrase": " The Bible and the Book of Mormon are joined together",
+      "Topic": "The Restoration",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "Daniel 2:44",
+      "KeyPhrase": " God’s kingdom shall stand forever",
+      "Topic": "The Restoration",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "Acts 3:19–21",
+      "KeyPhrase": " Peter prophesied of the Restoration",
+      "Topic": "The Restoration",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "2 Thessalonians 2:1–3",
+      "KeyPhrase": " Apostasy was foretold",
+      "Topic": "The Restoration",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "Joseph Smith﻿—History 1:15–20",
+      "KeyPhrase": " In the First Vision, God called Joseph Smith to be a prophet",
+      "Topic": "The Restoration",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "D&C 1:30",
+      "KeyPhrase": " The only true and living church",
+      "Topic": "The Restoration",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "D&C 135:3",
+      "KeyPhrase": " Joseph Smith labored for our salvation",
+      "Topic": "The Restoration",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "Jeremiah 1:4–5",
+      "KeyPhrase": " Jeremiah was foreordained to be a prophet",
+      "Topic": "Prophets and Revelation",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "Ezekiel 3:16–17",
+      "KeyPhrase": " The Lord’s watchmen give warnings from Him",
+      "Topic": "Prophets and Revelation",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "Amos 3:7",
+      "KeyPhrase": " God reveals His secret to His prophets",
+      "Topic": "Prophets and Revelation",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "John 15:16",
+      "KeyPhrase": " The Lord chooses and ordains apostles and prophets",
+      "Topic": "Prophets and Revelation",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "Ephesians 2:19–20",
+      "KeyPhrase": " The Lord’s Church is founded on apostles and prophets",
+      "Topic": "Prophets and Revelation",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "Ephesians 4:11–14",
+      "KeyPhrase": " Apostles and prophets help perfect the Saints",
+      "Topic": "Prophets and Revelation",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "D&C 1:37–38",
+      "KeyPhrase": " The voice of the Lord and His servants is the same",
+      "Topic": "Prophets and Revelation",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "D&C 21:4–6",
+      "KeyPhrase": " As we receive the prophet’s word in patience and faith, God will disperse the powers of darkness",
+      "Topic": "Prophets and Revelation",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "Matthew 16:15–19",
+      "KeyPhrase": " Jesus Christ promised to build His Church and confer the keys of the kingdom",
+      "Topic": "Priesthood and Priesthood Keys",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "D&C 13:1",
+      "KeyPhrase": " Keys of the Aaronic Priesthood",
+      "Topic": "Priesthood and Priesthood Keys",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "D&C 42:11",
+      "KeyPhrase": " The Lord’s representatives must be called by one who has authority",
+      "Topic": "Priesthood and Priesthood Keys",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "D&C 107:8",
+      "KeyPhrase": " The authority of the Melchizedek Priesthood",
+      "Topic": "Priesthood and Priesthood Keys",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "D&C 121:36, 41–42",
+      "KeyPhrase": " Priesthood power depends on one’s righteousness",
+      "Topic": "Priesthood and Priesthood Keys",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "Exodus 19:5–6",
+      "KeyPhrase": " Keep my covenant and ye shall be a holy nation",
+      "Topic": "Ordinances and Covenants",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "Psalm 24:3–4",
+      "KeyPhrase": " To stand worthy in the Lord’s presence, we must have clean hands and a pure heart",
+      "Topic": "Ordinances and Covenants",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "John 3:5",
+      "KeyPhrase": " We must be born of water and of the Spirit to enter the kingdom of God",
+      "Topic": "Ordinances and Covenants",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "Mosiah 18:8–10",
+      "KeyPhrase": " Through baptism we enter a covenant with God",
+      "Topic": "Ordinances and Covenants",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "3 Nephi 27:20",
+      "KeyPhrase": " Be baptized and sanctified by receiving the Holy Ghost",
+      "Topic": "Ordinances and Covenants",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "D&C 82:10",
+      "KeyPhrase": " The Lord is bound when we do what He says",
+      "Topic": "Ordinances and Covenants",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "D&C 84:20–22",
+      "KeyPhrase": " The power of godliness is manifest in priesthood ordinances",
+      "Topic": "Ordinances and Covenants",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "Genesis 1:28",
+      "KeyPhrase": " Multiply and replenish the earth",
+      "Topic": "Marriage and Family",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "Genesis 2:24",
+      "KeyPhrase": " Husband and wife are to be one",
+      "Topic": "Marriage and Family",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "Genesis 39:9",
+      "KeyPhrase": " Joseph resisted temptation",
+      "Topic": "Marriage and Family",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "Malachi 4:5–6",
+      "KeyPhrase": " Elijah will turn the hearts of fathers and children",
+      "Topic": "Marriage and Family",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "1 Corinthians 11:11",
+      "KeyPhrase": " Only together can a man and a woman fulfill the Lord’s plan",
+      "Topic": "Marriage and Family",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "Alma 39:9",
+      "KeyPhrase": " Go no more after the lust of your eyes",
+      "Topic": "Marriage and Family",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "D&C 49:15–17",
+      "KeyPhrase": " Marriage between a man and a woman is ordained of God",
+      "Topic": "Marriage and Family",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "D&C 131:1–4",
+      "KeyPhrase": " The new and everlasting covenant of marriage",
+      "Topic": "Marriage and Family",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "Exodus 20:3–17",
+      "KeyPhrase": " God revealed the Ten Commandments",
+      "Topic": "Commandments",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "Isaiah 58:6–7",
+      "KeyPhrase": " Fasting helps us to loose the bands of wickedness, undo heavy burdens, and provide for the poor",
+      "Topic": "Commandments",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "Isaiah 58:13–14",
+      "KeyPhrase": " The Sabbath is the Lord’s holy day",
+      "Topic": "Commandments",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "Malachi 3:8–10",
+      "KeyPhrase": " Paying tithing brings blessings",
+      "Topic": "Commandments",
+      "Book": "OT"
+    },
+    {
+      "Refrence": "Matthew 5:14–16",
+      "KeyPhrase": " Let your light so shine as an example to others",
+      "Topic": "Commandments",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "Matthew 22:36–39",
+      "KeyPhrase": " Love the Lord; love thy neighbor",
+      "Topic": "Commandments",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "John 14:15",
+      "KeyPhrase": " If ye love me, keep my commandments",
+      "Topic": "Commandments",
+      "Book": "NT"
+    },
+    {
+      "Refrence": "1 Nephi 3:7",
+      "KeyPhrase": " The Lord prepares a way to obey His commandments",
+      "Topic": "Commandments",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "Mosiah 2:17",
+      "KeyPhrase": " By serving others we serve God",
+      "Topic": "Commandments",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "Mosiah 2:41",
+      "KeyPhrase": " Obedience brings blessings and happiness",
+      "Topic": "Commandments",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "Alma 41:10",
+      "KeyPhrase": " Wickedness never was happiness",
+      "Topic": "Commandments",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "Moroni 7:45, 47–48",
+      "KeyPhrase": " Charity is the pure love of Christ",
+      "Topic": "Commandments",
+      "Book": "BOM"
+    },
+    {
+      "Refrence": "D&C 18:15–16",
+      "KeyPhrase": " Joy in bringing souls to Jesus Christ",
+      "Topic": "Commandments",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "D&C 64:9–11",
+      "KeyPhrase": " We are required to forgive all people",
+      "Topic": "Commandments",
+      "Book": "DC"
+    },
+    {
+      "Refrence": "D&C 89:18–21",
+      "KeyPhrase": " Blessings of the Word of Wisdom",
+      "Topic": "Commandments",
+      "Book": "DC"
+    }
+   ]

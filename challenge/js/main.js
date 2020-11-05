@@ -1,3 +1,11 @@
+import scriptures from './scriptures.js';
+import ls from './ls.js';
+
+
+document.getElementById("demo").innerHTML =
+obj.scriptures[1].refrence + " " + obj.scriptures[1].phrase;
+
+
 var subjectObject = {
     "Front-end": {
       "HTML": ["Links", "Images", "Tables", "Lists"],
