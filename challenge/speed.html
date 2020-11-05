@@ -8,27 +8,8 @@
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="module" src="js/ls.js"></script>
-    <script type="text/javascript" src="js/scripture.json"></script>
-    <script type="text/javascript">
-        function load() {
-            var mydata = JSON.parse(data);
-            alert(mydata.length);
-
-            var div = document.getElementById('data');
-
-            for (var i = 0; i < mydata.length; i++) {
-                div.innerHTML = div.innerHTML + "<p class='inner' id=" + i + ">" + mydata[i].Refrence + "</p>" + "<br>";
-            }
-        }
-    </script>
-
-
 </head>
-<style>
-    h1 {
-        color: black;
-    }
-</style>
+
 <html>
 
 <body>
@@ -36,17 +17,23 @@
         <h1>Team 1</h1>
     </header>
 
-    <h1>Phrase</h1>
+    <h2>Phrase</h2>
 
+    <h3>w3schools Example Json Parse()</h3>
     <p id="demo"></p>
 
+    <div id=reference></div>
+
+    <div id=options></div>
+
+
+
+    <!-- <h1>Object</h1>
     <p id="test"></p>
 
-    <div onload="load()">
-        <div id="data">
+    <h1>Json parse()</h1>
+    <div id="data">  Data  </div> -->
 
-        </div>
-    </div>
 
     <button>submit</button>
 
