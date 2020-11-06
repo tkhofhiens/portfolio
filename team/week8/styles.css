@@ -11,10 +11,16 @@ header, footer{
     color: chartreuse;
 }
 
+#details{
+    display: grid;
+    grid-template-columns: auto auto;
+}
 ul{
     list-style-type: none;
 }
 #onward{
     float: right;
 }
-
+.view-btn{
+    border: none;
+}
