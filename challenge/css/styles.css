@@ -24,7 +24,31 @@ a:link {
     grid-template-columns: auto auto;
   }
 
+  .stats{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
 
+  .scripture{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .reference{
+    background-color: #d69345;
+    color: white;
+    padding: 16px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+  }
+  .phrase{
+    background-color: #3388a1;
+    color: white;
+    padding: 16px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+  }
   /* .study {
     text-align: center;
     display: grid;
@@ -49,7 +73,7 @@ a:link {
   }
   
   header {
-      background-color:#3a9cab;
+      background-color:#1e373b;
       text-align: center;
   }
   
@@ -75,8 +99,8 @@ a:link {
       font-size: 16px;
   }
   
-  footer {
-      background-color:#3a9cab;
+  footer  {
+      background-color:#1e373b;
       text-align: center;
       padding: 5px;
       color: white;

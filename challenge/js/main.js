@@ -1,40 +1,47 @@
-import scriptures from './scriptures.js';
+// import scriptures from './scriptures.js';
 import ls from './ls.js';
 
 
-document.getElementById("demo").innerHTML =
-obj.scriptures[1].refrence + " " + obj.scriptures[1].phrase;
+//------------ 
+// load list of scriptures in study.html when buttn is clicked 
+// document.querySelector('#load').onclick = loadScriptures;
+//------------
+loadScriptures();
+
+function loadScriptures(){
+  const scriptureList = ls.getScriptureList();
+
+  scriptureList.forEach(scripture => {
+      const el = createScriptureElement(scripture)
+      addToList(el);
+  });
+}
+
+function createScriptureElement(scripture){
+  // Scripture div
+  const scriptureDiv = document.createElement('div');
+  scriptureDiv.classList.add('scripture');
+
+  // scripture Reference
+  const scriptureReference = document.createElement('div');
+  scriptureReference.innerText = scripture.Reference;
+  scriptureReference.classList.add('reference');
+
+ 
+  // scripture Phrase
+  const scripturePhrase = document.createElement('div');
+  scripturePhrase.innerText = scripture.Phrase;
+  scripturePhrase.classList.add('phrase');
 
 
-var subjectObject = {
-    "Front-end": {
-      "HTML": ["Links", "Images", "Tables", "Lists"],
-      "CSS": ["Borders", "Margins", "Backgrounds", "Float"],
-      "JavaScript": ["Variables", "Operators", "Functions", "Conditions"]    
-    },
-    "Back-end": {
-      "PHP": ["Variables", "Strings", "Arrays"],
-      "SQL": ["SELECT", "UPDATE", "DELETE"]
-    }
-  }
-  window.onload = function() {
-    var subjectSel = document.getElementById("subject");
-    var topicSel = document.getElementById("topic");
-    var chapterSel = document.getElementById("chapter");
-    for (var x in subjectObject) {
-      subjectSel.options[subjectSel.options.length] = new Option(x, x);
-    }
-    subjectSel.onchange = function() {
-      //display correct values
-      for (var y in subjectObject[this.value]) {
-        topicSel.options[topicSel.options.length] = new Option(y, y);
-      }
-    }
-    topicSel.onchange = function() {
-      //display correct values
-      var z = subjectObject[subjectSel.value][this.value];
-      for (var i = 0; i < z.length; i++) {
-        chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
-      }
-    }
-  }
+  scriptureDiv.appendChild(scriptureReference);
+  scriptureDiv.appendChild(scripturePhrase);
+  // console.log(scriptureDiv);
+  return scriptureDiv;
+}
+
+
+function addToList(scriptureDiv){
+  // add to the document 
+  document.querySelector('#scriptureList').appendChild(scriptureDiv);
+}
