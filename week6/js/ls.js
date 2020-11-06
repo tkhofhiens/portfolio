@@ -47,16 +47,3 @@ export default{
     updateTodo,
     getTodoList
 }
-
-
-
-      //     console.log(btn.getAttribute('completed'));
-        //     if (btn.getAttribute('completed') === 'false'){
-        //         btn.setAttribute('completed', true);
-        //         btn.innerHTML = '&#10004';  
-        //         console.log(btn.getAttribute('completed'));
-        //     } else{
-        //         btn.setAttribute('completed', false);
-        //         btn.innerHTML = ''; 
-        //         console.log(btn.getAttribute('completed'));
-        //     }  

@@ -4,8 +4,9 @@ import ls from './ls.js';
 loadTodos();
 
 document.querySelector('#addBtn').onclick = newTodo;
-
-loadTodos();
+document.querySelector('#activeFilter').onclick = applyFilter;	
+document.querySelector('#allFilter').onclick = applyFilter;	
+document.querySelector('#completedFilter').onclick = applyFilter;
 
 function loadTodos(){
     const todoList = ls.getTodoList();
@@ -83,8 +84,6 @@ function toggleComplete(e){
     console.log(e.currentTarget);
     if (btn.getAttribute('completed') === 'false'){
         let status = true;
-        // btn.innerHTML = '&#10004';
-        // console.log('Toggle Loop - id ', btn.getAttribute('data-id'), 'status', status);
         ls.updateTodo(btn.getAttribute('data-id'), status);
         
     } else{
@@ -95,31 +94,23 @@ function toggleComplete(e){
     loadTodos();
 }
 
-// loadTodos();
 
-// document.querySelector('#activeFilter').onclick = applyFilter;
-// document.querySelector('#allFilter').onclick = applyFilter;
-// document.querySelector('#completedFilter').onclick = applyFilter;
+function applyFilter(e){
+    document.querySelector('#todos').innerHTML = '';	
+    let filteredTodos = [];	
+    const allTodos = ls.getTodoList();	
 
-
-// function applyFilter(e){
-//     document.querySelector('#todos').innerHTML = '';
-//     let filteredTodos = [];
-//     const allTodos = ls.getTodoList();
-
-//     if (e.currentTarget.id == 'activeFilter'){
-//         filteredTodos = utils.activeFilter(allTodos)
-//     }
-//     else if (e.currentTarget.id == 'allFilter'){
-//         filteredTodos = allTodos
-//     }
-//     else if (e.currentTarget.id == 'completedFilter'){
-//         filteredTodos = utils.completedFilter(allTodos)
-//     }
-
-//     filteredTodos.forEach(todo =>{
-//         const el = createTodoElement(todo)
-//         addToList(el)
-//     })
-
-// }
+    if (e.currentTarget.id == 'activeFilter'){	
+        filteredTodos = utils.activeFilter(allTodos)	
+    }	
+    else if (e.currentTarget.id == 'allFilter'){
+        filteredTodos = allTodos
+    }	
+    else if (e.currentTarget.id == 'completedFilter'){	
+        filteredTodos = utils.completedFilter(allTodos)
+    }
+    filteredTodos.forEach(todo =>{	
+        const el = createTodoElement(todo)
+        addToList(el)	
+    })	
+}
