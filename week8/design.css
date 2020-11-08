@@ -19,7 +19,11 @@ a:link {
     color: goldenrod;
   }
   
-  
+  .myCanvas {
+    border: dotted 2px black;
+}
+
+
   header, main, footer {
       max-width: 700px;
       margin: 0 auto;
