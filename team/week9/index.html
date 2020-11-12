@@ -48,7 +48,7 @@
     </div>
   </div>
 
-  <audio data-key="65" src="sounds/clap.wav"></audio>
+  <audio data-key="65" id="65" src="sounds/clap.wav"></audio>
   <audio data-key="83" src="sounds/hihat.wav"></audio>
   <audio data-key="68" src="sounds/kick.wav"></audio>
   <audio data-key="70" src="sounds/openhat.wav"></audio>
@@ -80,15 +80,15 @@ function removeTransition(e){
 var jump = 10;
 function moveKey(e){
   const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-  console.log(e);
+  console.log(e.location);
   console.log(jump);
-  // key.style.top = "10px";a
   if (jump == 100){
     jump = 0;
   }else{
   jump += 10;
   }
   key.style.top = `${jump}px`;
+  // e.location = jump;
 }
 // This is not a complete solution per specifications the Jump variable should count to 100 for each key. In this solution any key pressed adds to the Jump variable and resets after 10 times. 
 
