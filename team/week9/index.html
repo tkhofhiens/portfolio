@@ -43,7 +43,7 @@
     </div>
     <div data-key="76" class="key">
       <kbd>L</kbd>
-      <p class = hidden>This paragraph should be hidden.</p>
+      <p class = hidden>10</p>
       <span class="sound">tink</span>
     </div>
   </div>
@@ -60,28 +60,38 @@
 
 <script>
 
+
 function playSound(e) {
+  
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
   const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
   if (!audio) return;
   audio.currentTime = 0;
-  audio.play();  
-  //key.classList.add('shift1');
-//  key.transform('translateY(+10px)');
-//  function moveKey(key);
-  let jump = 200;
+  audio.play();
   key.classList.add('playing');
-  key.style.transform = `translate(0px, ${jump}px)`;
+  moveKey(e);
+  
 }
 function removeTransition(e){
   if (e.propertyName !== 'transform') return;
   this.classList.remove('playing');
 }
-/*
-function moveKey(key) {
-  key.style.transform = "translateY(+=10px)";
+
+var jump = 10;
+function moveKey(e){
+  const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+  console.log(e);
+  console.log(jump);
+  // key.style.top = "10px";a
+  if (jump == 100){
+    jump = 0;
+  }else{
+  jump += 10;
+  }
+  key.style.top = `${jump}px`;
 }
-*/
+// This is not a complete solution per specifications the Jump variable should count to 100 for each key. In this solution any key pressed adds to the Jump variable and resets after 10 times. 
+
 
 
 const keys = document.querySelectorAll('.key');
