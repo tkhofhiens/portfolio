@@ -53,20 +53,23 @@ function addToList(scriptureDiv){
 }
 
 function bookFilter(){
+  document.querySelector('#scriptureList').innerHTML= '';
   console.log('bookFilter');
   var book = document.getElementById("mySelect").value;
   document.getElementById("demo").innerHTML = "You selected: " + book;
   const allScriptures = ls.getScriptureList();
-  
+  let filteredList = [];	
 
   // allScriptures.forEach(scripture => {
   //   if (scripture.Book == book){
   // let filterList = 
   //   }
   // });
-  let filterList = allScriptures.filter(s =>{
-    s.Book === book;
+  filteredList = allScriptures.filter(s =>{
+    s.Book == book;
     console.log(s.Book, book);
   })
-  renderList(filterList);
+  console.log(filteredList);
+  renderList(filteredList);
+
 }
