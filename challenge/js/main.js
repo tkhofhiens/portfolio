@@ -1,5 +1,7 @@
 // import scriptures from './scriptures.js';
 import ls from './ls.js';
+import utils from './utils.js';
+
 
 
 //------------ 
@@ -45,3 +47,21 @@ function addToList(scriptureDiv){
   // add to the document 
   document.querySelector('#scriptureList').appendChild(scriptureDiv);
 }
+
+
+// function applyFilter(e){
+//   document.querySelector('#scriptureList').innerHTML = '';	
+//   let filteredScriptures = [];	
+//   const allScriptures = ls.getScriptureList();	
+
+//   if (e.currentTarget.id == 'bookFilter'){	
+//       filteredScriptures = utils.bookFilter(allScriptures)	
+//   }	
+//   else if (e.currentTarget.id == 'topicFilter'){
+//       filteredScriptures = utils.topicFilter(allScriptures)	
+//   }	
+//   filteredScriptures.forEach(scripture =>{	
+//       const el = createTodoElement(scripture)
+//       addToList(el)	
+//   })	
+// }

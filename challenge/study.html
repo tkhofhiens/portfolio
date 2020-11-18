@@ -1,23 +1,23 @@
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speed Game</title>
-    <meta name="author" content="Tiffany Quinlan" />
-    <meta name="description" content="Doctrinal Mastery Game" />
-    <link rel="stylesheet" href="CSS/normalize.css">
-    <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="module" src="js/main.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study</title>
+  <meta name="author" content="Tiffany Quinlan" />
+  <meta name="description" content="Doctrinal Mastery Game" />
+  <link rel="stylesheet" href="CSS/normalize.css">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="module" src="js/main.js"></script>
 
 </head>
 <html>
 
 <body>
-    <header>
-        <h1>Scripture study</h1>
+  <header>
+    <h1>Scripture study</h1>
 
-        <div class="scripture-filters">
-            <div class="dropdown">
+    <div class="scripture-filters">
+      <!-- <div class="dropdown">
                 <button onclick="myFunction()" class="dropbtn">Scripture Topics
                     <i class="fa fa-caret-down"></i></button>
                 <div id="myDropdown" class="dropdown-content">
@@ -32,27 +32,27 @@
                   <a href="#">Marriage and Family</a>
                   <a href="#">Commandments</a>
                 </div>
-              </div>
-            
-              <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Scripture Books
-                    <i class="fa fa-caret-down"></i></button>
-                <div id="myDropdown" class="dropdown-content">
-                  <a href="#">BOM</a>
-                  <a href="#">D&C</a>
-                  <a href="#">NT</a>
-                  <a href="#">OT</a>
-                </div>
-              </div>
-            </div>
+              </div> -->
 
-    </header>
-    <main>
-      <!-- <button id ='load'>Load Scriptures</button> -->
-      <div id = 'scriptureList'></div>
+      <div class="dropdown">
+        <button onclick = "bookFilter()" class="dropbtn"> Scripture Books <i class="fa fa-caret-down"></i></button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#BOM">BOM</a>
+          <a href="#DC">D&C</a>
+          <a href="#NT">NT</a>
+          <a href="#OT">OT</a>
+        </div>
+      </div>
+    </div>
+    </div>
 
-    </main>
-    <footer>
+  </header>
+  <main>
+    <!-- <button id ='load'>Load Scriptures</button> -->
+    <div id='scriptureList'></div>
+
+  </main>
+  <!-- <footer>
         <h3>Filter By</h3>
         <div class="scripture-filters">
             <div class="dropdown">
@@ -84,7 +84,7 @@
               </div>
             </div>
 
-    </footer>
+    </footer> -->
 </body>
 
 
