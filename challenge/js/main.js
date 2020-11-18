@@ -66,6 +66,7 @@ function bookFilter(){
   // });
   let filterList = allScriptures.filter(s =>{
     s.Book === book;
+    console.log(s.Book, book);
   })
   renderList(filterList);
 }
