@@ -2,21 +2,25 @@
 import ls from './ls.js';
 import utils from './utils.js';
 
-
-
 //------------ 
 // load list of scriptures in study.html when buttn is clicked 
 // document.querySelector('#load').onclick = loadScriptures;
 //------------
+
+document.querySelector('#mySelect').onchange = bookFilter;
+
 loadScriptures();
 
 function loadScriptures(){
   const scriptureList = ls.getScriptureList();
+  renderList(scriptureList);
+}
 
-  scriptureList.forEach(scripture => {
-      const el = createScriptureElement(scripture)
-      addToList(el);
-  });
+function renderList(list){
+  list.forEach(scripture => {
+    const el = createScriptureElement(scripture)
+    addToList(el);
+});
 }
 
 function createScriptureElement(scripture){
@@ -48,20 +52,20 @@ function addToList(scriptureDiv){
   document.querySelector('#scriptureList').appendChild(scriptureDiv);
 }
 
+function bookFilter(){
+  console.log('bookFilter');
+  var book = document.getElementById("mySelect").value;
+  document.getElementById("demo").innerHTML = "You selected: " + book;
+  const allScriptures = ls.getScriptureList();
+  
 
-// function applyFilter(e){
-//   document.querySelector('#scriptureList').innerHTML = '';	
-//   let filteredScriptures = [];	
-//   const allScriptures = ls.getScriptureList();	
-
-//   if (e.currentTarget.id == 'bookFilter'){	
-//       filteredScriptures = utils.bookFilter(allScriptures)	
-//   }	
-//   else if (e.currentTarget.id == 'topicFilter'){
-//       filteredScriptures = utils.topicFilter(allScriptures)	
-//   }	
-//   filteredScriptures.forEach(scripture =>{	
-//       const el = createTodoElement(scripture)
-//       addToList(el)	
-//   })	
-// }
+  // allScriptures.forEach(scripture => {
+  //   if (scripture.Book == book){
+  // let filterList = 
+  //   }
+  // });
+  let filterList = allScriptures.filter(s =>{
+    s.Book === book;
+  })
+  renderList(filterList);
+}
