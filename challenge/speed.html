@@ -6,8 +6,10 @@
     <meta name="description" content="Doctrinal Mastery Game" />
     <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,100;1,300&family=Russo+One&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="module" src="js/ls.js"></script>
+    <!-- <script type="module" src="js/ls.js"></script> -->
 </head>
 
 <html>
@@ -18,29 +20,31 @@
         <div id=reference></div>
     </header>
     <main>
-        <h3>Match the Phrase</h3>
+        <div class= 'dojo'>
+        <button id='start'>Click to Start</button>
+        <div id='info'></div>
+        <div id='result'></div>
 
-        <div id=options></div>
+        <div id='question'></div>
+        <form id='response'>
+            <input name='answer' type='text'>
+            <button type='submit'>Submit Answer</button>
+        </form>
 
-       <!-- <h4>w3schools Example Json Parse()</4>
-        <p id="demo"></p> -->
+        
+    
 
-        <button>submit</button>
-
-   
+        <div class=stats>
+        <div id='score'>Score: <strong>0</strong></div>
+        <div id='timer'>Time: <strong>20</strong></div>
+        </div>
     </div>
+       
     </main>
     <footer>
-        <div class = stats>
-            <div id=time>
-                <h4 id=clock>time</h4>
-            </div>
-    
-            <div id=score>
-                <h4>score</h4>
-            </div>
+            <p>Tiffany Hofhiens | Copyright 2020</p>
+            <script src="js/game.js"></script>
     </footer>
 </body>
-
 
 </html>

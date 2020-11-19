@@ -1,3 +1,13 @@
+/* colors
+#0b5394ff - dark blue
+#9fc5e8ff - light blue
+#6aa84fff - green
+
+
+font-family: 'Roboto', sans-serif; 
+font-family: 'Russo One', sans-serif; 
+*/
+
 
 /* unvisited link */
 a:link {
@@ -20,11 +30,6 @@ a:link {
   }
   
   .games {
-    display: grid;
-    grid-template-columns: auto auto;
-  }
-
-  .stats{
     display: grid;
     grid-template-columns: auto auto;
   }
@@ -67,7 +72,7 @@ a:link {
   header, main, footer {
       max-width: 700px;
       margin: 0 auto;
-      font-family: 'Noto Sans JP', sans-serif;
+      ont-family: 'Russo One', sans-serif; 
       padding: 10px;
       
   }
@@ -104,7 +109,6 @@ a:link {
       text-align: center;
       padding: 5px;
       color: white;
-   
    }
 
    .dropbtn {
