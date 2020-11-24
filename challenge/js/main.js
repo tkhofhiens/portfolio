@@ -7,7 +7,8 @@ import utils from './utils.js';
 // document.querySelector('#load').onclick = loadScriptures;
 //------------
 
-document.querySelector('#mySelect').onchange = bookFilter;
+document.querySelector('#selectBook').onchange = bookFilter;
+document.querySelector('#selectTopic').onchange = topicFilter;
 
 loadScriptures();
 
@@ -55,19 +56,31 @@ function addToList(scriptureDiv) {
 function bookFilter() {
   document.querySelector('#scriptureList').innerHTML = '';
   console.log('bookFilter');
-  var book = document.getElementById("mySelect").value;
-  document.getElementById("demo").innerHTML = "You selected: " + book;
+  var book = document.getElementById("selectBook").value;
+  // document.getElementById("demo").innerHTML = "You selected: " + book;
   const allScriptures = ls.getScriptureList();
   let filteredList = [];
 
-  // allScriptures.forEach(scripture => {
-  //   if (scripture.Book == book){
-  // let filterList = 
-  //   }
-  // });
   filteredList = allScriptures.filter(s => {
-    s.Book == book;
-    console.log(s.Book, book);
+    // console.log(s.Book, book);
+    return s.Book == book;
+  })
+  console.log(filteredList);
+  renderList(filteredList);
+
+}
+
+function topicFilter() {
+  document.querySelector('#scriptureList').innerHTML = '';
+  console.log('topicFilter');
+  var topic = document.getElementById("selectTopic").value;
+  // document.getElementById("demo").innerHTML = "You selected: " + topic;
+  const allScriptures = ls.getScriptureList();
+  let filteredList = [];
+
+  filteredList = allScriptures.filter(s => {
+    // console.log(s.Topic, topic);
+    return s.Topic == topic;
   })
   console.log(filteredList);
   renderList(filteredList);

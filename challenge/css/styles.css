@@ -11,13 +11,13 @@ font-family: 'Russo One', sans-serif;
 
 /* unvisited link */
 a:link {
-    color: darkblue;
+    color: #0b5394ff;
     text-decoration: none;
   }
   
   /* visited link */
   a:visited {
-    color: darkblue;
+    color: #0b5394ff;
   }
   /* mouse over link */
   a:hover {
@@ -39,52 +39,49 @@ a:link {
     grid-template-columns: auto auto;
   }
   .reference{
-    background-color: #d69345;
+    background-color: #0b5394ff;
     color: white;
     padding: 16px;
-    margin: 10px;
+    margin: 5px;
     font-size: 16px;
     border: none;
+    border-radius: 30px 5px 5px 30px;
   }
   .phrase{
-    background-color: #3388a1;
-    color: white;
+    background-color:#9fc5e8ff;
+    color: #0b5394ff;
     padding: 16px;
-    margin: 10px;
+    margin: 5px;
     font-size: 16px;
-    border: none;
+    border-radius: 5px 30px 30px 5px;
   }
-  /* .study {
-    text-align: center;
-    display: grid;
-    grid-template-columns: auto;
-  } */
 
   button{
-    background-color: #4CAF50;
+    background-color:#6aa84fff;
     color: white;
     padding: 16px;
     margin: 10px;
     font-size: 16px;
     border: none;
+    
   }
   
   header, main, footer {
       max-width: 700px;
       margin: 0 auto;
-      ont-family: 'Russo One', sans-serif; 
+      font-family: 'Roboto', sans-serif; 
       padding: 10px;
       
   }
   
   header {
-      background-color:#1e373b;
+      background-color:#0b5394ff;
       text-align: center;
   }
   
   h1 {
       color: white;
-      font-family: 'Acme', sans-serif;
+      font-family: 'Russo One', sans-serif; 
   }
   h2 {
       border-bottom: 1px solid rgb(0, 0, 0);
@@ -105,18 +102,20 @@ a:link {
   }
   
   footer  {
-      background-color:#1e373b;
+      background-color:#0b5394ff;
       text-align: center;
       padding: 5px;
       color: white;
    }
 
    .dropbtn {
-    background-color: #4CAF50;
+    background-color: #6aa84fff;
     color: white;
-    padding: 16px;
+    padding: 15px;
+    margin: 15px;
     font-size: 16px;
     border: none;
+    /* border-radius: 10px; */
   }
   
   .dropdown {
@@ -144,4 +143,4 @@ a:link {
   
   .dropdown:hover .dropdown-content {display: block;}
   
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  .dropdown:hover .dropbtn {background-color: #6aa84fff;}

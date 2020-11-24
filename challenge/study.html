@@ -6,7 +6,9 @@
   <meta name="description" content="Doctrinal Mastery Game" />
   <link rel="stylesheet" href="CSS/normalize.css">
   <link rel="stylesheet" href="CSS/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,100;1,300&family=Russo+One&display=swap" rel="stylesheet"> 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,100;1,300&family=Russo+One&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="module" src="js/main.js"></script>
 
@@ -18,25 +20,24 @@
     <h1>Scripture Study</h1>
 
     <div class="scripture-filters">
-      <!-- <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Scripture Topics
-                    <i class="fa fa-caret-down"></i></button>
-                <div id="myDropdown" class="dropdown-content">
-                  <a href="#">Acquiring Spiritual Knowledge</a>
-                  <a href="#">The Godhead</a>
-                  <a href="#">The Plan of Salvation</a>
-                  <a href="#">The Atonement of Jesus Christ</a>
-                  <a href="#">The Restoration</a>
-                  <a href="#">Prophets and Revelation</a>
-                  <a href="#">Priesthood and Priesthood Keys</a>
-                  <a href="#">Ordinances and Covenants</a>
-                  <a href="#">Marriage and Family</a>
-                  <a href="#">Commandments</a>
-                </div>
-              </div> -->
+      <select id="selectTopic" class="dropbtn" onchange="topicFilter()">Scripture Topics
+        <!-- <button class="dropbtn"> Scripture Topics <i class="fa fa-caret-down"></i></button> -->
+        <div id="myDropdown" class="dropdown-content">
+          <option value="Acquiring Spiritual Knowledge">Acquiring Spiritual Knowledge</option>
+          <option value="The Godhead">The Godhead</option>
+          <option value="The Plan of Salvation">The Plan of Salvation</option>
+          <option value="The Atonement of Jesus Christ">The Atonement of Jesus Christ</option>
+          <option value="The Restoration">The Restoration</option>
+          <option value="Prophets and Revelation">Prophets and Revelation</option>
+          <option value="Priesthood and Priesthood Keys">Priesthood and Priesthood Keys</option>
+          <option value="Ordinances and Covenants">Ordinances and Covenants</option>
+          <option value="Marriage and Family">Marriage and Family</option>
+          <option value="Commandments">Commandments</option>
+        </div>
+      </select>
 
       <div class="dropdown">
-        <select id="mySelect" class="dropbtn" onchange="bookFilter()">Scripture Books
+        <select id="selectBook" class="dropbtn" onchange="bookFilter()">Scripture Books
           <!-- <button class="dropbtn"> Scripture Books <i class="fa fa-caret-down"></i></button> -->
           <div id="myDropdown" class="dropdown-content">
             <option>Scripture Books</option>
@@ -47,7 +48,7 @@
           </div>
         </select>
       </div>
-      <p id="demo"></p>
+      <!-- <p id="demo"></p> -->
     </div>
     </div>
 
