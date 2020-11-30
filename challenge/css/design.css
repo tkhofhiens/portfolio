@@ -18,24 +18,25 @@ body{
 -moz-box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
 box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
 }
-h1{
+/* h1{
   color: goldenrod;
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
   text-align: center;
   font-size: 48px;
   margin: 0;
-}
-button {
+} */
+/* button {
   color: #ffffff;
   background-color: goldenrod;
   border-color: #130269;
   border-radius: 4px;
   margin: 0.2em 0;
   display: block;
-  /* width: 100%; */
+  width: 100%;
   font-size: 24px;
-}
+} */
+
 #question {
  font-size: 24px;
 }
@@ -47,15 +48,15 @@ button {
   text-align: center;
 }
 .stats{
-    background-color: #1e373b;
-    color: goldenrod;
+    background-color: #0b5394ff;
+    color: white;
     padding: 20px;
     text-align: center;
     display: grid;
     grid-template-columns: auto auto;
 }
 .correct {
-    background-color: rgb(31, 131, 31);
+    background-color: #6aa84fff;
 }
 .wrong {
   color: #fff;

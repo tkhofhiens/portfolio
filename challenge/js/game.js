@@ -1,8 +1,8 @@
-const quiz = [
-    { name: "Superman", realName: "Clark Kent" },
-    { name: "Wonderwoman", realName: "Dianna Prince" },
-    { name: "Batman", realName: "Bruce Wayne" },
-];
+import ls from './ls.js';
+
+const quiz = ls.getScriptureList();
+console.log(quiz);
+
 // View Object
 const view = {
     score: document.querySelector('#score strong'),
@@ -50,7 +50,7 @@ const game = {
         this.score = 0;
         this.questions = [...quiz];
         view.setup();
-        this.secondsRemaining = 20;
+        this.secondsRemaining = 30;
         this.timer = setInterval(this.countdown, 1000);
         this.ask();
     },
@@ -61,10 +61,10 @@ const game = {
             game.gameOver();
         }
     },
-    ask(name) {
+    ask(phrase) {
         if (this.questions.length > 0) {
             this.question = this.questions.pop();
-            const question = `What is ${this.question.name}'s real name?`;
+            const question = `${this.question.Phrase}`;
             view.render(view.question, question);
         }
         else {
@@ -74,7 +74,7 @@ const game = {
     check(event) {
         event.preventDefault();
         const response = view.response.answer.value;
-        const answer = this.question.realName;
+        const answer = this.question.Reference;
         if (response === answer) {
             view.render(view.result, 'Correct!', { 'class': 'correct' });
             this.score++;
@@ -85,13 +85,61 @@ const game = {
         view.resetForm();
         this.ask();
     },
+    //----- multiple choice radio button example
+    // var submitAnswer = function() {
+
+
+    // submitAnswer(){
+    //     var radios = document.getElementsByName('choice');
+    //     var val= "";
+    //     for (var i = 0, length = radios.length; i < length; i++) {
+    //         if (radios[i].checked) {
+    //             val = radios[i].value; 
+    //             break;
+    //             }
+    //     }
+        
+    //     if (val == "" ) {
+    //         alert('please select choice answer');
+    //     } else if ( val == "Scripting" ) {
+    //         alert('Answer is correct !');
+    //     } else {
+    //         alert('Answer is wrong');
+    //     }
+    // },
+
+    //----- end of multiple choice section
     gameOver() {
-        view.render(view.info, `Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`);
+        view.render(view.result, `Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`,{ 'class': 'correct' });
         view.teardown();
         clearInterval(this.timer);
     }
 }
-
+   
 view.start.addEventListener('click', () => game.start(quiz), false);
 view.response.addEventListener('submit', (event) => game.check(event), false);
 view.hide(view.response);
+
+
+function submitAnswer(){
+    var radios = document.getElementsByName('choice');
+    var val= "";
+    for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+            val = radios[i].value; 
+            break;
+            }
+    }
+    
+    if (val == "" ) {
+        alert('please select choice answer');
+    } else if ( val == "Scripting" ) {
+        alert('Answer is correct !');
+    } else {
+        alert('Answer is wrong');
+    }
+}
+
+export default {
+    submitAnswer
+}
