@@ -20,13 +20,13 @@ var questions = [{
 
 // create an list of possible answers
 function answerArray (questionId){
-    var ans;
+    var ans = [];
     var id = questionId;
     // console.log('ansarray '+scripture[questionId].Reference);
-    for (var count=1;count<4;count++){
+    for (var count=0;count<4;count++){
         console.log('inside for loop id = '+ id +'; ref = '+ scripture[questionId].Reference);
         ans.push(scripture[questionId].Reference);
-    i++;
+    questionId++;
     }
     return ans;
 }
@@ -50,9 +50,11 @@ function displayQuestion() {
     console.log(scripture[questionId].Phrase);
     console.log(scripture[questionId].Reference);
     // make array of possible answers:
-    var choices = answerArray(questionId);
+    // var choices = answerArray(questionId);
+    var answers = answerArray(questionId);
     // get a random order for the answers:
-    var answers = shuffled(choice);
+    // var answers = shuffled(choices);
+
     // Display question
     domQuestion.textContent = (questionId+1) + '. ' + 
                               scripture[questionId].Phrase;
@@ -77,7 +79,16 @@ domNext.addEventListener('click', function () {
     var domAnswer = domAnswers.find(input => input.checked);
     if (!domAnswer) return; // nothing was selected
     // update number of correctly answered questions:
-    if (domAnswer.value == questions[questionId].answers[0]) correctAnswers++;
+    // -----  update -----------------------------------------------------------------
+    // scripture.
+    // if (domAnswer.value == questions[questionId].answers[0]) correctAnswers++;
+    if (domAnswer.value == scripture[questionId].Reference)
+    {
+       correctAnswers++; 
+       console.log("correctAnswers");
+       
+    } 
+    console.log(correctAnswers);
     // next question
     questionId++;
     if (questionId >= questions.length) {
