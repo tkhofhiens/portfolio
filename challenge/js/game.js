@@ -18,6 +18,10 @@ const view = {
         }
         target.innerHTML = content;
     },
+    // renderAnswers(){
+    //     var ref = document.getElementsByName("choice1");
+    //     ref.setAttribute('value', this.question.Reference)
+    // },
     show(element) {
         element.style.display = 'block';
     },
@@ -26,6 +30,8 @@ const view = {
     },
     resetForm() {
         this.response.answer.value = '';
+        // var ref1 = document.getElementsByName("choice1");
+        // ref1.setAttribute('value', this.question.Reference);
         this.response.answer.focus();
     },
     setup() {
@@ -121,25 +127,26 @@ view.response.addEventListener('submit', (event) => game.check(event), false);
 view.hide(view.response);
 
 
-function submitAnswer(){
-    var radios = document.getElementsByName('choice');
-    var val= "";
-    for (var i = 0, length = radios.length; i < length; i++) {
-        if (radios[i].checked) {
-            val = radios[i].value; 
-            break;
-            }
-    }
-    
-    if (val == "" ) {
-        alert('please select choice answer');
-    } else if ( val == "Scripting" ) {
-        alert('Answer is correct !');
-    } else {
-        alert('Answer is wrong');
-    }
-}
 
-export default {
-    submitAnswer
+
+renderAnswers();
+
+function renderAnswers(){
+    const displayAns = document.createElement("form");
+    displayAns.innerHTML = this.question.Reference;
+
+    var ref = document.getElementsByName("choice1");
+    ref.setAttribute('value', this.question.Reference)
 }
+    // const answer = this.question.Reference;
+    // radioInput.setAttribute('type', 'radio');
+    // radioInput.setAttribute('value', name);
+    
+    
+
+  
+
+
+// export default {
+//     submitAnswer
+// }
