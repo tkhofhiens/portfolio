@@ -1,7 +1,52 @@
 import ls from './ls.js';
 
-const quiz = ls.getScriptureList();
-console.log(quiz);
+// const quiz = ls.getScriptureList();
+const scripture = ls.getScriptureList();
+
+// console.log(quiz);
+console.log(scripture);
+
+let numQuestions = 3;
+
+// create an list of possible answers
+function answerArray (choices){
+    var ans = [];
+    // var id = choices;
+    // console.log('ansarray '+scripture[choices].Reference);
+    for (var count=0;count<4;count++){
+        console.log(' answer id = '+ scripture[choices].Id +'; ref = '+ scripture[choices].Reference);
+        ans.push(scripture[choices].Reference);
+        choices++;
+    }
+    return ans;
+}
+
+function displayQuestion() {
+    console.log(scripture[questionId].Phrase);
+    console.log(scripture[questionId].Reference);
+    // make array of possible answers:
+    // var choices = answerArray(questionId);
+    var answers = answerArray(questionId);
+    // get a random order for the answers:
+    // var answers = shuffled(choices);
+
+    // Display question
+    domQuestion.textContent = (questionId+1) + '. ' + 
+                              scripture[questionId].Phrase;
+    domAnswers.forEach(function (input, i){
+        // Set checkbox value and unselect it
+        input.value = scripture[i].Reference;
+        input.checked = false;
+        // Display the answer text
+        input.nextElementSibling.textContent = answers[i];
+    });
+
+}
+
+// define variables for some of the HTML elements:
+var domQuestion = document.querySelector('#question');
+var domAnswers = Array.from(document.querySelectorAll('input[name=answer]'));
+var domNext = document.querySelector('#next');
 
 // View Object
 const view = {
@@ -51,15 +96,54 @@ const view = {
     }
 };
 
+
+// Initialise and display first question
+var questionId = 0;
+var correctAnswers = 0;
+
+// Respond to a click on the Next button 
+domNext.addEventListener('click', function () {
+    // update correct answer counter:
+    var domAnswer = domAnswers.find(input => input.checked);
+    if (!domAnswer) return; // nothing was selected
+    // update number of correctly answered questions:
+    // -----  update -----------------------------------------------------------------
+    // scripture.
+    // if (domAnswer.value == questions[questionId].answers[0]) correctAnswers++;
+    console.log("domAnswer.value "+domAnswer.value)
+    if (domAnswer.value == scripture[questionId].Reference)
+    {
+       correctAnswers++; 
+    //    console.log("domAnswer.value "+domAnswer.value)
+       console.log("correctAnswer");
+       
+    } 
+    console.log(correctAnswers);
+    // next question
+    questionId++;
+    if (questionId >= numQuestions) {
+        alert('You have answered ' + correctAnswers + 
+              ' of ' + numQuestions + ' questions correctly.');
+        // restart
+        questionId = 0;
+        correctAnswers = 0;
+    }
+    displayQuestion();
+});
+
+
+
 const game = {
-    start(quiz) {
+    start(scripture) {
+        displayQuestion();
         this.score = 0;
-        this.questions = [...quiz];
+        this.questions = [...scripture];
         view.setup();
         this.secondsRemaining = 30;
         this.timer = setInterval(this.countdown, 1000);
         this.ask();
     },
+    
     countdown() {
         game.secondsRemaining--;
         view.render(view.timer, game.secondsRemaining);
@@ -67,7 +151,7 @@ const game = {
             game.gameOver();
         }
     },
-    ask(phrase) {
+    ask(Phrase) {
         if (this.questions.length > 0) {
             this.question = this.questions.pop();
             const question = `${this.question.Phrase}`;
@@ -77,6 +161,7 @@ const game = {
             this.gameOver();
         }
     },
+
     check(event) {
         event.preventDefault();
         const response = view.response.answer.value;
@@ -91,30 +176,7 @@ const game = {
         view.resetForm();
         this.ask();
     },
-    //----- multiple choice radio button example
-    // var submitAnswer = function() {
 
-
-    // submitAnswer(){
-    //     var radios = document.getElementsByName('choice');
-    //     var val= "";
-    //     for (var i = 0, length = radios.length; i < length; i++) {
-    //         if (radios[i].checked) {
-    //             val = radios[i].value; 
-    //             break;
-    //             }
-    //     }
-        
-    //     if (val == "" ) {
-    //         alert('please select choice answer');
-    //     } else if ( val == "Scripting" ) {
-    //         alert('Answer is correct !');
-    //     } else {
-    //         alert('Answer is wrong');
-    //     }
-    // },
-
-    //----- end of multiple choice section
     gameOver() {
         view.render(view.result, `Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`,{ 'class': 'correct' });
         view.teardown();
@@ -122,31 +184,25 @@ const game = {
     }
 }
    
-view.start.addEventListener('click', () => game.start(quiz), false);
+view.start.addEventListener('click', () => game.start(scripture), false);
 view.response.addEventListener('submit', (event) => game.check(event), false);
 view.hide(view.response);
 
 
 
 
-renderAnswers();
+// renderAnswers();
 
-function renderAnswers(){
-    const displayAns = document.createElement("form");
-    displayAns.innerHTML = this.question.Reference;
+// function renderAnswers(){
+//     const displayAns = document.createElement("form");
+//     displayAns.innerHTML = this.question.Reference;
 
-    var ref = document.getElementsByName("choice1");
-    ref.setAttribute('value', this.question.Reference)
-}
-    // const answer = this.question.Reference;
-    // radioInput.setAttribute('type', 'radio');
-    // radioInput.setAttribute('value', name);
-    
-    
+//     var ref = document.getElementsByName("choice1");
+//     ref.setAttribute('value', this.question.Reference)
+// }
+
 
   
 
 
-// export default {
-//     submitAnswer
-// }
+
