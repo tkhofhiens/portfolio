@@ -4,9 +4,9 @@ import ls from './ls.js';
 const scripture = ls.getScriptureList();
 
 // console.log(quiz);
-console.log(scripture);
+// console.log(scripture);
 
-let numQuestions = 3;
+let numQuestions = 15;
 
 // create an list of possible answers
 function answerArray (choices){
@@ -22,12 +22,12 @@ function answerArray (choices){
 }
 
 function displayQuestion() {
-    console.log(scripture[questionId].Phrase);
-    console.log(scripture[questionId].Reference);
+    // console.log(scripture[questionId].Phrase);
+    // console.log(scripture[questionId].Reference);
     // make array of possible answers:
-    // var choices = answerArray(questionId);
     var answers = answerArray(questionId);
     // get a random order for the answers:
+    // var choices = answerArray(questionId);
     // var answers = shuffled(choices);
 
     // Display question
@@ -63,22 +63,14 @@ const view = {
         }
         target.innerHTML = content;
     },
-    // renderAnswers(){
-    //     var ref = document.getElementsByName("choice1");
-    //     ref.setAttribute('value', this.question.Reference)
-    // },
+ 
     show(element) {
         element.style.display = 'block';
     },
     hide(element) {
         element.style.display = 'none';
     },
-    resetForm() {
-        this.response.answer.value = '';
-        // var ref1 = document.getElementsByName("choice1");
-        // ref1.setAttribute('value', this.question.Reference);
-        this.response.answer.focus();
-    },
+
     setup() {
         this.show(this.question);
         this.show(this.response);
@@ -87,7 +79,6 @@ const view = {
         this.render(this.score, game.score);
         this.render(this.result, '');
         this.render(this.info, '');
-        this.resetForm();
     },
     teardown() {
         this.hide(this.question);
@@ -108,26 +99,23 @@ domNext.addEventListener('click', function () {
     if (!domAnswer) return; // nothing was selected
     // update number of correctly answered questions:
     // -----  update -----------------------------------------------------------------
-    // scripture.
-    // if (domAnswer.value == questions[questionId].answers[0]) correctAnswers++;
-    console.log("domAnswer.value "+domAnswer.value)
-    if (domAnswer.value == scripture[questionId].Reference)
-    {
-       correctAnswers++; 
-    //    console.log("domAnswer.value "+domAnswer.value)
-       console.log("correctAnswer");
-       
-    } 
+    var response = domAnswer.value;
+    console.log("response "+response);
+    const answer = scripture[questionId].Reference;
+    console.log("answer "+answer);
+    if (response === answer) {
+        view.render(view.result, 'Correct!', { 'class': 'correct' });
+        this.score++;
+        numQuestions++;
+        console.log("correctAnswer"); 
+        view.render(view.score, this.score);
+    } else {
+        view.render(view.result, `Wrong! The correct answer was ${answer}`, { 'class': 'wrong' });
+    }
     console.log(correctAnswers);
+    
     // next question
     questionId++;
-    if (questionId >= numQuestions) {
-        alert('You have answered ' + correctAnswers + 
-              ' of ' + numQuestions + ' questions correctly.');
-        // restart
-        questionId = 0;
-        correctAnswers = 0;
-    }
     displayQuestion();
 });
 
@@ -164,21 +152,17 @@ const game = {
 
     check(event) {
         event.preventDefault();
-        const response = view.response.answer.value;
-        const answer = this.question.Reference;
-        if (response === answer) {
-            view.render(view.result, 'Correct!', { 'class': 'correct' });
-            this.score++;
-            view.render(view.score, this.score);
-        } else {
-            view.render(view.result, `Wrong! The correct answer was ${answer}`, { 'class': 'wrong' });
-        }
-        view.resetForm();
+
         this.ask();
     },
 
     gameOver() {
         view.render(view.result, `Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`,{ 'class': 'correct' });
+        alert('You have answered ' + correctAnswers + 
+                  ' of ' + numQuestions + ' questions correctly.');
+            // restart
+            questionId = 0;
+            numQuestions = 0;
         view.teardown();
         clearInterval(this.timer);
     }
@@ -188,18 +172,6 @@ view.start.addEventListener('click', () => game.start(scripture), false);
 view.response.addEventListener('submit', (event) => game.check(event), false);
 view.hide(view.response);
 
-
-
-
-// renderAnswers();
-
-// function renderAnswers(){
-//     const displayAns = document.createElement("form");
-//     displayAns.innerHTML = this.question.Reference;
-
-//     var ref = document.getElementsByName("choice1");
-//     ref.setAttribute('value', this.question.Reference)
-// }
 
 
   
