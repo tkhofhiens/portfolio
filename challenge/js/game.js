@@ -3,42 +3,43 @@ const scripture = ls.getScriptureList();
 
 // console.log(scripture);
 
-let numQuestions = 0;
-
 // create an list of possible answers
 function answerArray (question){
     var ans = [];
-    // var id = choices;
     // console.log('ansarray '+scripture[choices].Reference);
     for (var count=0;count<4;count++){
-        console.log(' answer id = '+ scripture[question].Id +'; ref = '+ scripture[question].Reference);
+        // console.log(' answer id = '+ scripture[question].Id +'; ref = '+ scripture[question].Reference);
         ans.push(scripture[question].Reference);
         question++;
     }
-    console.log("answer array "+ans.toString());
+    // console.log("answer array "+ans.toString());
     return ans;
 }
 
-function displayQuestion() {
-    // console.log(scripture[questionId].Phrase);
-    // console.log(scripture[questionId].Reference);
-    // make array of possible answers:
-    var answers = answerArray(questionId);
-    // get a random order for the answers:
-    // var choices = answerArray(questionId);
-    // var answers = shuffled(choices);
+// Generic function to return a shuffled array:
+function shuffled(arr) {
+    arr = arr.slice(); // shallow copy
+    for (var i = 0; i < arr.length; i++) {
+        var j = Math.floor(Math.random() * (arr.length - i)) + i;
+        [arr[i], arr[j]] = [arr[j], arr[i]]; // swap
+    }
+    return arr;
+}
 
+
+function displayQuestion() {
+    // make array of possible answers:
+    var choices = answerArray(questionId);
+    // get a random order for the answers:
+    var answers = shuffled(choices);
     // Display question
-    domQuestion.textContent = (questionId+1) + '. ' + 
-                              scripture[questionId].Phrase;
+    domQuestion.textContent = (questionId+1) + '. ' + scripture[questionId].Phrase;
+    // Display Answers
     domAnswers = Array.from(document.querySelectorAll('input[name=answer]'));
-    // domAnswers = answers;
     //console.log("questionId"+ questionId);
+    // update the answer values and text
     domAnswers.forEach(function (input, i){
-        // Set checkbox value and unselect it
-        input.value = scripture[questionId+i].Reference;
-        console.log("value "+ input.value);
-        console.log(input.checked);
+        input.value = answers[i];
         input.checked = false;
         // Display the answer text
         input.nextElementSibling.textContent = answers[i];
@@ -48,7 +49,6 @@ function displayQuestion() {
 
 // define variables for some of the HTML elements:
 var domQuestion = document.querySelector('#question');
-// var domQuestion = view.question;
 var domAnswers = Array.from(document.querySelectorAll('input[name=answer]'));
 var domNext = document.querySelector('#next');
 
@@ -95,7 +95,7 @@ const view = {
 
 // Initialise and display first question
 var questionId = 0;
-
+var numQuestions = 0;
 
 const game = {
     start(scripture) {
@@ -118,34 +118,24 @@ const game = {
 
     check(event) {
         event.preventDefault();
-        
-      //  domNext.addEventListener('click', function () {
-            // update correct answer counter:
-            var domAnswer = domAnswers.find(input => input.checked);
-            // console.log("DomAnswers Array? "+domAnswers.);
-            // domAnswers.forEach(function (input, i){
-            //     console.log(input.value);
-            //     console.log(input.checked);
-            // });
-            // console.log("DomAnswer "+domAnswer.value);
-            
-            if (!domAnswer) return; // nothing was selected
-            // update number of correctly answered questions:
-            // -----  update -----------------------------------------------------------------
-            var response = domAnswer.value; 
-            console.log("response "+response);
-            const answer = scripture[questionId].Reference;
-            console.log("answer "+answer);
-            if (response === answer) {
-                view.render(view.result, 'Correct!', { 'class': 'correct' });
-                this.score++;
-                numQuestions++;
-                view.render(view.score, this.score);
-            } else {
-                view.render(view.result, `Wrong! The correct answer was ${answer}`, { 'class': 'wrong' });
-            }
-            // next question
-            questionId++;
+        // update correct answer counter:
+        var domAnswer = domAnswers.find(input => input.checked);
+        if (!domAnswer) return; // nothing was selected
+        var response = domAnswer.value; 
+        console.log("response "+response);
+        const answer = scripture[questionId].Reference;
+        console.log("answer "+answer);
+        // update number of correctly answered questions:
+        if (response === answer) {
+            view.render(view.result, 'Correct!', { 'class': 'correct' });
+            this.score++;
+            view.render(view.score, this.score);
+        } else {
+            view.render(view.result, `Wrong! The correct answer was ${answer}`, { 'class': 'wrong' });
+        }
+        // next question
+        numQuestions++;
+        questionId++;
         displayQuestion();
     },
 
@@ -161,14 +151,6 @@ const game = {
     }
 }
 
-// domNext
 view.start.addEventListener('click', () => game.start(scripture), false);
 view.response.addEventListener('submit', (event) => game.check(event), false);
 view.hide(view.response);
-
-
-
-  
-
-
-
