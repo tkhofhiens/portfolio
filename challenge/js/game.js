@@ -34,9 +34,6 @@ function displayQuestion() {
     var answers = shuffled(choices);
     // Display question
     domQuestion.textContent = (questionId+1) + '. ' + scripture[questionId].Phrase;
-    // Display Answers
-    domAnswers = Array.from(document.querySelectorAll('input[name=answer]'));
-    //console.log("questionId"+ questionId);
     // update the answer values and text
     domAnswers.forEach(function (input, i){
         input.value = answers[i];
@@ -50,7 +47,6 @@ function displayQuestion() {
 // define variables for some of the HTML elements:
 var domQuestion = document.querySelector('#question');
 var domAnswers = Array.from(document.querySelectorAll('input[name=answer]'));
-var domNext = document.querySelector('#next');
 
 // View Object
 const view = {
@@ -99,13 +95,12 @@ var numQuestions = 0;
 
 const game = {
     start(scripture) {
-        displayQuestion();
         this.score = 0;
         this.questions = [...scripture];
         view.setup();
-        this.secondsRemaining = 50;
+        this.secondsRemaining = 30;
         this.timer = setInterval(this.countdown, 1000);
-        //this.ask();
+        displayQuestion();
     },
     
     countdown() {
