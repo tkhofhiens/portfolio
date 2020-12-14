@@ -98,7 +98,7 @@ const game = {
         this.score = 0;
         this.questions = [...scripture];
         view.setup();
-        this.secondsRemaining = 30;
+        this.secondsRemaining = 50;
         this.timer = setInterval(this.countdown, 1000);
         displayQuestion();
     },
