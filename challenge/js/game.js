@@ -87,6 +87,7 @@ const view = {
     teardown() {
         this.hide(this.question);
         this.hide(this.response);
+        this.hide(this.review);
         this.show(this.start);
     }
 };
