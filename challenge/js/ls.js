@@ -12,6 +12,11 @@ xmlhttp.open("GET", "data/scriptures.json", true);
 xmlhttp.send();
 // -----------  end of w3schools
 
+function saveScripture(scripture){	
+  const scriptureList = getScriptureList();	
+  scriptureList.push(scripture);	
+  localStorage.setItem('scriptureList', JSON.stringify(scriptureList));	
+}
 
 function deleteScripture(id){
   const scriptureList = getScriptureList();
