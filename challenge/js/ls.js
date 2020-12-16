@@ -1,5 +1,5 @@
 
-// ----------  from w3schools (pulling from from scripture.json)
+// ----------  help from w3schools (pulling from from scripture.json)
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
@@ -10,16 +10,9 @@ xmlhttp.onreadystatechange = function() {
 };
 xmlhttp.open("GET", "data/scriptures.json", true);
 xmlhttp.send();
-// -----------  end of w3schools example
+// -----------  end of w3schools
 
-// ------- not tested
-function saveScripture(scripture){
-  const scriptureList = getScriptureList();
-  scriptureList.push(scripture);
-  localStorage.setItem('scriptureList', JSON.stringify(scriptureList));
-}
 
-// -------- not tested
 function deleteScripture(id){
   const scriptureList = getScriptureList();
   
