@@ -10,18 +10,25 @@ body{
   background-size: 100% auto;
   padding-top: 10px;
 }
-/* .quiz-body{
-  background: rgba(255,255,255,1);
-  margin: 150px 33%;
-  padding: 10px 20px 50px 20px;
-  -webkit-box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
--moz-box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
-box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
-} */
 
 #question {
  font-size: 24px;
 }
+
+.board {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #0b5394ff;
+  margin: 20px;
+}
+#cards{
+  background-color:#9fc5e8ff;
+  padding: 40px;
+  margin: 10px;
+  text-align: center;
+}
+
 
 #response input[type="radio"] {
   opacity: 0;

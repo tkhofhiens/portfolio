@@ -10,7 +10,6 @@ import utils from './utils.js';
 document.querySelector('#selectBook').onchange = bookFilter;
 document.querySelector('#selectTopic').onchange = topicFilter;
 
-
 loadScriptures();
 
 function loadScriptures() {
@@ -56,7 +55,7 @@ function addToList(scriptureDiv) {
 
 function bookFilter() {
   document.querySelector('#scriptureList').innerHTML = '';
-  console.log('bookFilter');
+  console.log('Book Filter');
   var book = document.getElementById("selectBook").value;
   // document.getElementById("demo").innerHTML = "You selected: " + book;
   const allScriptures = ls.getScriptureList();
@@ -73,7 +72,7 @@ function bookFilter() {
 
 function topicFilter() {
   document.querySelector('#scriptureList').innerHTML = '';
-  console.log('topicFilter');
+  console.log('Topic Filter');
   var topic = document.getElementById("selectTopic").value;
   // document.getElementById("demo").innerHTML = "You selected: " + topic;
   const allScriptures = ls.getScriptureList();
