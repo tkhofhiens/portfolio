@@ -37,14 +37,21 @@ a:link {
     color: #0b5394ff;
   }
   
-  div.fixed {
+  .fixed {
     position: fixed;
-    top: 40px;
-    left: 70px;
-    width: 20px;
-    color: fff;
+    top: 30px;
+    right: 60px;
     
   }
+
+  a.icon:link {
+    background-color: #0b5394ff;
+    border: groove rgb(209, 208, 208) 3px;
+    padding-top: 20px;
+  }
+
+
+
 
   .games{
     display: grid;
@@ -80,6 +87,7 @@ a:link {
     margin: 10px;
     font-size: 16px;
     border: none;
+    border-radius: 4px;
     
   }
   
@@ -117,8 +125,6 @@ a:link {
   body{
       font-size: 16px;
   }
-  
-
 
    .dropbtn {
     background-color: #6aa84fff;
@@ -127,35 +133,15 @@ a:link {
     margin: 15px;
     font-size: 16px;
     border: none;
-    /* border-radius: 10px; */
+    
   }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
+  select {
+    /* background-color:#6aa84fff;
+    color:white; */
+    outline: none;
+    border-radius: 15px 15px 0px 0px;
   }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .dropbtn {background-color: #6aa84fff;}
+  select
 
 
   footer  {

@@ -6,6 +6,7 @@
   <meta name="description" content="Doctrinal Mastery Game" />
   <link rel="stylesheet" href="CSS/normalize.css">
   <link rel="stylesheet" href="/portfolio/challenge/css/styles.css">
+  <!-- <link rel="stylesheet" href="css/styles.css"> -->
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,100;1,300&family=Russo+One&display=swap"
     rel="stylesheet">
@@ -17,6 +18,7 @@
 
 <body>
   <header>
+    <div class="fixed"><a href="/index/challenge.html" class="icon"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a></div>
     <h1>Scripture Study</h1>
 
     <div class="scripture-filters">
@@ -36,18 +38,18 @@
         </div>
       </select>
 
-      <div class="dropdown">
-        <select id="selectBook" class="dropbtn" onchange="bookFilter()">Scripture Books
-          <!-- <button class="dropbtn"> Scripture Books <i class="fa fa-caret-down"></i></button> -->
-          <div id="myDropdown" class="dropdown-content">
-            <option>Scripture Books</option>
-            <option value="BOM">Book of Mormon</option>
-            <option value="DC">Doctrine and Covenants</option>
-            <option value="NT">New Testament</option>
-            <option value="OT">Old Testament</option>
-          </div>
-        </select>
-      </div>
+      <!-- <div class="dropdown"> -->
+      <select id="selectBook" class="dropbtn" onchange="bookFilter()">Scripture Books
+        <!-- <button class="dropbtn"> Scripture Books <i class="fa fa-caret-down"></i></button> -->
+        <!-- <div id="myDropdown" class="dropdown-content"> -->
+          <option>Scripture Books</option>
+          <option value="BOM">Book of Mormon</option>
+          <option value="DC">Doctrine and Covenants</option>
+          <option value="NT">New Testament</option>
+          <option value="OT">Old Testament</option>
+        <!-- </div> -->
+      </select>
+      <!-- </div> -->
       <!-- <p id="demo"></p> -->
     </div>
     </div>

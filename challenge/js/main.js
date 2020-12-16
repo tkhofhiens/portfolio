@@ -10,6 +10,7 @@ import utils from './utils.js';
 document.querySelector('#selectBook').onchange = bookFilter;
 document.querySelector('#selectTopic').onchange = topicFilter;
 
+
 loadScriptures();
 
 function loadScriptures() {
