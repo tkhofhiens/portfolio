@@ -126,7 +126,7 @@ const game = {
             this.score++;
             view.render(view.score, this.score);
         } else {
-            view.render(view.result, `Wrong! The correct answer was ${answer}`, { 'class': 'wrong' });
+            view.render(view.result, `The correct answer was ${answer}`, { 'class': 'wrong' });
         }
         // next question
         numQuestions++;

@@ -5,8 +5,10 @@
     <meta name="author" content="Tiffany Quinlan" />
     <meta name="description" content="Doctrinal Mastery Game" />
     <link rel="stylesheet" href="CSS/normalize.css">
-    <link rel="stylesheet" href="/portfolio/challenge/css/styles.css">
-    <link rel="stylesheet" href="/portfolio/challenge/css/design.css">
+    <!-- <link rel="stylesheet" href="/portfolio/challenge/css/styles.css"> -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="/portfolio/challenge/css/design.css"> -->
+    <link rel="stylesheet" href="css/design.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,100;1,300&family=Russo+One&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <script type="module" src="js/ls.js"></script> -->
@@ -16,6 +18,8 @@
 
 <body>
     <header>
+        <div class="fixed"><i class="fa fa-home fa-2x" aria-hidden="true"></i></div>
+        
         <h1>Scripture Speed</h1>
         <div id=reference></div>
     </header>
@@ -23,7 +27,7 @@
         <div class= 'dojo'>
         <button id='start'>Click to Start</button>
         <div id='info'></div>
-        <div id='result'></div>
+        
 
         <div id='question'></div><br>
         <form id='response'>
@@ -34,13 +38,14 @@
             <button type='submit'>Submit Answer</button>
         </form>
 
+        <div id='result'></div>
+
         <div class=stats>
         <div id='score'>Score: <strong>0</strong></div>
         <div id='timer'>Time: <strong>50</strong></div>
         </div>
 
     </div>
-       
     </main>
     <footer>
             <p>Tiffany Hofhiens | Copyright 2020</p>

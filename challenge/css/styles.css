@@ -11,29 +11,46 @@ font-family: 'Russo One', sans-serif;
 
 /* unvisited link */
 a:link {
-    color: #0b5394ff;
+    color: #f1f1f1;
     text-decoration: none;
+    padding: 10px 20px;
+    /* margin: 20px; */
+    background-color: #6aa84fff;
+    border-radius: 10px;
+    border: solid #0b5394ff;
+    width: 50%;
   }
   
   /* visited link */
   a:visited {
-    color: #0b5394ff;
+    color: #fff;
+    border: solid #0b5394ff;
   }
   /* mouse over link */
   a:hover {
-      color: maroon;
+      color: #0b5394ff;
+      background-color: rgb(157, 204, 136);
     }
   
   /* selected link */
   a:active {
-    color: goldenrod;
+    color: #0b5394ff;
   }
   
-  .games {
+  div.fixed {
+    position: fixed;
+    top: 40px;
+    left: 70px;
+    width: 20px;
+    color: fff;
+    
+  }
+
+  .games{
     display: grid;
     grid-template-columns: auto auto;
   }
-
+ 
   .scripture{
     display: grid;
     grid-template-columns: auto auto;
@@ -101,12 +118,7 @@ a:link {
       font-size: 16px;
   }
   
-  footer  {
-      background-color:#0b5394ff;
-      text-align: center;
-      padding: 5px;
-      color: white;
-   }
+
 
    .dropbtn {
     background-color: #6aa84fff;
@@ -144,3 +156,12 @@ a:link {
   .dropdown:hover .dropdown-content {display: block;}
   
   .dropdown:hover .dropbtn {background-color: #6aa84fff;}
+
+
+  footer  {
+    background-color:#0b5394ff;
+    text-align: center;
+    padding: 5px;
+    margin-top: 20px;
+    color: white;
+ }
