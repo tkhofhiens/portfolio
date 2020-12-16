@@ -1,66 +1,78 @@
-input:invalid {
-  border: 2px dashed red;
-}
 
-input:valid {
-  border: 2px solid black;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f1f1f1;
-  line-height: 1.7;
-  color: #323330;
-}
-
-a {
+/* unvisited link */
+a:link {
+  color: darkblue;
   text-decoration: none;
-  color: #f2bb13;
 }
 
+/* visited link */
+a:visited {
+  color: darkblue;
+}
+/* mouse over link */
 a:hover {
-  text-decoration: underline;
-}
-
-
-.container {
-  display: flex;
-  flex-direction: row;
-
-}
-
-.container h2 {
-  font-size: 1.2rem;
-  font-weight: normal;
-}
-
-
-.container .user {
-  background-color: #fff;
-  padding: 2rem;
-  border: solid 1px #ccd0d4;
-  border-radius: 0.3rem;
-  text-align: center;
-  margin: 1rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .04);
-}
-
-.container img {
-  border-radius: 50%;
-  padding: 1rem;
-  background-color: #f4f4f4;
-}
-
-@media(max-width:560px) {
-  .container {
-      display: flex;
-      flex-direction: column;
-
+    color: goldenrod;
   }
+
+/* selected link */
+a:active {
+  color: goldenrod;
 }
+
+.myCanvas {
+  border: dotted 2px black;
+}
+
+
+header, main, footer {
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: 'Noto Sans JP', sans-serif;
+    padding: 10px;
+    
+}
+
+header {
+    background-color:#3a9cab;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 30px; 
+    border-style: groove;
+}
+
+h1 {
+    color: white;
+    font-family: 'Acme', sans-serif;
+}
+h2 {
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+}
+
+img {
+   width: 150px;
+   height: auto;
+   border-radius: 10px;
+   box-shadow: 5px 5px 7px grey;
+   float: right;
+
+}
+div {
+  border-radius: 10px;
+  box-shadow: 5px 5px 7px grey;
+  padding: 10px;
+  margin: 10px;
+}
+body{
+    font-size: 16px;
+}
+
+footer {
+    background-color:#3a9cab;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    color: white;
+    border-style: ridge;
+ 
+ }
