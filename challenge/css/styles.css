@@ -50,6 +50,7 @@ a:link {
   }
   a.icon:hover {
     color:  rgb(209, 208, 208);
+    background-color: #0b5394ff;
   }
 
   .games{
